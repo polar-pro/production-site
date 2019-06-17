@@ -1,0 +1,72 @@
+{% if product.images.size > 0 %}
+  <div class="pxu-scope pxu-clearfix pxu-thumbs-left" data-shop="polarpro.myshopify.com" data-host="//scope.pixelunion.net" style="visibility: hidden; opacity: 0;">
+
+    {% if product.images.size > 1 %}
+    <div class="pxu-product-thumbnails">
+      {% for image in product.images %}
+        <img alt="{{ image.alt }}" data-high-res="{{ image | product_img_url: '1024x1024' }}" src="{{ image | product_img_url: 'compact' }}" class="{% if forloop.first %}active{% endif %}">
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div class="pxu-big-image {% if product.images.size > 1 %}pxu-multiple-images{% endif %}">
+
+      {{ product.images.first | product_img_url: '1024x1024' | img_tag: image.alt }}
+
+      <span title="Expand this view" class="pxu-full-view-activate"></span>
+
+      <div class="pxu-zoom"></div>
+    </div>
+
+    <div class="pxu-full-view-wrapper  pxu-simple-lightbox">
+
+      <div class="style-simple-lightbox-markup">
+
+        <span class="pxu-full-view-close">Close view</span>
+
+        <div class="pxu-full-view  pxu-clearfix">
+          {% for image in product.images %}
+            <div class="pxu-lightbox-image-wrapper {% if forloop.first %}first{% endif %} {% if forloop.last %}last{% endif %}">
+              <div class="pxu-lightbox-image">
+                <span class="pxu-line-height">
+                  <div class="pxu-lightbox-zoom-area">
+                    <img alt="{{ image.alt }}" data-high-res="{{ image | product_img_url: '1024x1024' }}" src="{{ image | product_img_url: '1024x1024' }}">
+                    <div class="pxu-zoom" style="background-image: url({{ image | product_img_url: '1024x1024' }});"></div>
+                  </div>
+                </span>
+              </div>
+
+              
+            </div>
+          {% endfor %}
+        </div>
+
+      </div>
+
+      <div class="style-modal-markup">
+        <div class="pxu-full-view   pxu-clearfix">
+          <span class="pxu-full-view-close">Close view</span>
+          {% if product.images.size > 1 %}
+          <div class="pxu-full-view-thumbnails-wrapper nano pxu-clearfix">
+            <div class="pxu-full-view-thumbnails">
+              {% for image in product.images %}
+                <img alt="{{ image.alt }}" data-high-res="{{ image | product_img_url: '1024x1024' }}" src="{{ image | product_img_url: 'compact' }}">
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+          <div class="pxu-full-view-main">
+            <div class="pxu-full-image">
+              <img alt="" src="" />
+              <div class="pxu-zoom"></div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% else %}
+  <div class="pxu-no-image"><img class="product-no-images" src="//s3.amazonaws.com/cdn.pixelunion.net/zoomatron-3000/no-image.svg" alt="No images available" /></div>
+{% endif %}

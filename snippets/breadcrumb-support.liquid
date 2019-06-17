@@ -1,0 +1,22 @@
+<!-- /snippets/breadcrumb.liquid -->
+{% comment %}
+  Documentation - http://docs.shopify.com/support/your-website/navigation/creating-a-breadcrumb-navigation
+{% endcomment %}
+<!-- breadcrum template for support pages -->
+{% unless template == 'support' %}
+<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+  <a href="/pages/support-2-0" title="support home">Support Home</a>
+  {% if template contains 'product' %}
+
+    {% if collection %}
+      <span aria-hidden="true">&rsaquo;</span>
+      {% if collection.handle %}
+        {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+        {{ collection.title | link_to: url }}
+      {% endif %}
+    {% endif %}
+    <span aria-hidden="true">&rsaquo;</span>
+    <span>{{ product.title }}</span>
+  {% endif %}
+</nav>
+{% endunless %}

@@ -1,0 +1,208 @@
+<div class="polarpro-hero-banner-container" title="Osmo Pocket Accessories & filters">
+	<div class="banner-content">
+		<h2>Dedicated to those who</h2>
+		<p>Chase The Perfect <span>Shot</span></p>
+		<div class="shop-by-select-container">
+			<div class="styled-select">
+				<select class="shop-by-select" name="shop-by-select" id='shop-by-select'>
+					<option value="" disabled selected class='hide-option'>SELECT DEVICE</option>
+          <option value="/collections/camera">Mirrorless/DSLR</option>
+					<option value="/collections/mavic-2-filters-accessories">Mavic 2</option>
+					<option value="/collections/osmo-action-accessories-action-filters">Osmo Action</option>
+					<option value="/collections/osmo-pocket-filters-accessories">Osmo Pocket</option>
+					<option value="/collections/dji-mavic-air-filters-and-accessories">Mavic Air</option>
+					<option value="/collections/dji-mavic-filters-and-accessories">Mavic Pro/Platinum</option>
+					<option value="/pages/shop-by-device">GoPro</option>
+
+
+				</select>
+			</div>
+			<button type="button" name="button" id="go" onclick="gotosite()" class='find-my-gear'>Find my Gear</button>
+		</div>
+	</div>
+</div>
+
+<div class="product-range wrapper">
+	<h2 class='homepage-section-header'>Product Range</h2>
+	<div class="container">
+		<a href='/collections/camera/camera-filters' class="quartzline-filters item" title="82mm Camera Filters">
+			<div class="name">
+				<p>Camera <span>Filters</span></p>
+			</div>
+		</a>
+		<a href='/collections/drone-filters' class="aerial-filters item" title="DJI Mavic 2 Filters">
+			<div class="name">
+				<p>Drone <span>Filters</span></p>
+			</div>
+		</a>
+		<!-- <a href='/collections/goprofilters' class="gopro-filters item" title="GoPro Filters">
+			<div class="name">
+				<p>GoPro <span>Filters</span></p>
+			</div>
+		</a> -->
+		<a href='/collections/osmo-filters' class="osmo-filters item" title="Osmo Filters">
+			<div class="name">
+				<p>Osmo <span>Filters</span></p>
+			</div>
+		</a>
+		<a href='/collections/camera' class="camera-gear item" title="Lens Covers and Camera Accessories">
+			<div class="name">
+				<p>Camera <span>Gear</span></p>
+			</div>
+		</a>
+		<a href='/collections/mavic-tablet-mounts' class="mounting-solutions item" title="Ronin S Monitor mounts and DJI Tablet Mounts">
+			<div class="name">
+				<p>Mounting <span>Solutions</span></p>
+			</div>
+		</a>
+		<a href='/collections/camera_travel_cases' class="travel-cases item" title="Drone Cases">
+			<div class="name">
+				<p>Travel <span>Cases</span></p>
+			</div>
+		</a>
+	</div>
+</div>
+
+
+<div class="custom-shop-cta">
+	<div class="image" title="Circular Polarizer Filters">
+		<div class="make-it-yours">
+			<h2>Make It Yours</h2>
+			<p>Custom shop | <span>Only at polarpro.com</span></p>
+		</div>
+	</div>
+	<div class="cta-container">
+		<div class="logo">
+			<img src="{{ 'custom-shop-logo.png' | asset_url }}">
+		</div>
+		<div class="cta">
+			<div class="shop-by-select-container">
+				<div class="styled-select">
+					<select class="shop-by-select" name="shop-by-select" id='shop-by-custom-shop'>
+						<option value="" disabled selected class='hide-option'>SELECT PRODUCT</option>
+						<option value="/collections/quartzline-custom-filter-sets">QuartzLine Filters</option>
+						<option value="/collections/mavic-2-custom-filter-sets">Mavic 2 Filters</option>
+						<option value="/collections/osmo-action-custom-filter-sets">Osmo Action Filters</option>
+						<option value="/products/single-filter-cinema-series-osmo-pocket">Osmo Pocket Filters</option>
+						<option value="/collections/mavic-air-custom-shop">Mavic Air Filters</option>
+						<option value="/collections/mavic-pro-platinum-custom-shop">Mavic Pro/Platinum Filters</option>
+						<option value="/collections/gopro-custom-filter-sets">GoPro Filters</option>
+					</select>
+				</div>
+				<button type="button" name="button" id="go" onclick="gotositeCustomshop()" class='find-my-gear'>Build your own</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="visionaries-cta" title="Camera Accessories and Neutral Density Filters">
+	<div class="visionaries-container">
+		<h2>Visionaries</h2>
+		<p>See how professional content-creators integrate</p>
+		<p>PolarPro gear into their workflow.</p>
+		<a href="/pages/team-polarpro">View the Team</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+function gotosite() {
+	window.location = document.getElementById("shop-by-select").value; // JQuery:  $("#menu").val();
+}
+
+function gotositeCustomshop() {
+	window.location = document.getElementById("shop-by-custom-shop").value; // JQuery:  $("#menu").val();
+}
+
+</script>
+
+<!-- this is index javascript -->
+<script type="text/javascript">
+
+$(window).load(function(){
+
+	//polarpro slider
+	// var owl = $('#polarpro-slider');
+	//
+	// owl.owlCarousel({
+	// 	 items: 1,
+	// 	 loop: false,
+	// 	 nav: false,
+	// 	 dots: false,
+  //        autoplay: false,
+  //        autoplayTimeout: 8500
+	// });
+	//
+	// $('#polar-slider-next').click(function() {
+	// 	owl.trigger('next.owl.carousel');
+	// 	return false;
+	// });
+	//
+	// $('#polar-slider-prev').click(function() {
+	// 	owl.trigger('prev.owl.carousel');
+	// 	return false;
+	// });
+
+  // $( ".accordion" ).accordion({
+  // heightStyle: "content",
+  //   collapsible: true,
+  //   active: false
+	// });
+	//
+	// $( ".accordion>h3" ).click(function(){
+	// 	$( ".accordion>h3 i" ).removeClass('fa-chevron-circle-up').addClass('fa-chevron-circle-down');
+	// 	if($(this).hasClass('ui-state-active')){
+	// 		$(this).find('i').removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');
+	// 	}
+	// });
+
+	//we are polar pro video pop up
+	/* Apply fancybox to multiple items */
+	// $(".we-are-polarpro").fancybox({
+		// padding: 0,
+    // 	type: 'iframe',
+    // 	scrolling: 'no',
+		// width: 1400,
+		// autoHeight: true,
+		// autoWidth: true,
+		// autoSize : true
+	// });
+
+	$('.we-are-polarpro').fancybox({
+	  afterLoad : function( instance, current ) {
+
+	     // Remove scrollbars and change background
+	    current.$content.css({
+				overflow   : 'visible',
+	      background : '#000'
+			});
+
+	  },
+	  onUpdate : function( instance, current ) {
+	    var width,
+	        height,
+	        ratio = 21 / 9,
+	        video = current.$content;
+
+	    if ( video ) {
+	      video.hide();
+
+	      width  = current.$slide.width() - 100;
+	      height = current.$slide.height();
+
+	      if ( height * ratio > width ) {
+	        height = width / ratio;
+	      } else {
+	        width = height * ratio;
+	      }
+
+	      video.css({
+	        width  : width,
+	        height : height
+	      }).show();
+	    }
+	  }
+	})
+
+});
+</script>

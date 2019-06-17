@@ -1,0 +1,600 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+
+
+
+<head>
+<!-- infinite options load faster -->
+<script src="//d1liekpayvooaz.cloudfront.net/apps/customizery/customizery.js?shop={{shop.permanent_domain}}"></script>
+
+<!-- optimizely js -->
+<script src="https://cdn.optimizely.com/js/10102931975.js"></script>
+<script>
+  {% if customer.tags.size > 0 %}
+  window.upsell_customer_tags = "{{customer.tags |join: ','}}";
+  {% endif %}
+  window.bogo_variant_ids = "{{shop.metafields.uh_variant_ids.uh_variant_ids}}";
+</script>
+
+
+
+
+<!-- Basic page needs ================================================== -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+{% if settings.favicon_enable %}
+<link rel="shortcut icon" href="{{ 'favicon.ico' | asset_url }}" type="image/png" />
+{% endif %}
+<link rel="apple-touch-icon" sizes="180x180" href="{{ 'apple-touch-icon.png' | asset_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ 'favicon-32x32.png' | asset_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ 'favicon-16x16.png' | asset_url }}">
+<link rel="manifest" href="{{ 'manifest.json' | asset_url }}">
+<link rel="mask-icon" href="{{ 'safari-pinned-tab.svg' | asset_url }}" color="#037e8c">
+<meta name="theme-color" content="#ffffff">
+
+<!-- Title and description ================================================== -->
+<title>
+{{ page_title }}{% if current_tags %}{% assign meta_tags = current_tags | join: ', ' %} &ndash; {{ 'general.meta.tags' | t: tags: meta_tags }}{% endif %}{% if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+</title>
+
+{% if page_description %}
+<meta name="description" content="{{ page_description | escape }}">
+{% endif %}
+
+<!-- Product meta ================================================== -->
+{% include 'social-meta-tags' %}
+
+<!-- Helpers ================================================== -->
+<link rel="canonical" href="{{ canonical_url }}">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="{{ settings.color_primary }}">
+
+{% unless settings.cart_type == 'page' %}
+<!-- Ajaxify Cart Plugin ================================================== -->
+{{ 'ajaxify.scss.css' | asset_url | stylesheet_tag }}
+{% endunless %}
+
+<!-- CSS ================================================== -->
+{{ 'style.scss.css' | asset_url | stylesheet_tag }}
+
+{{ 'owl.carousel.css' | asset_url | stylesheet_tag }}
+{{ 'jquery.fancybox.css' | asset_url | stylesheet_tag }}
+<!--{{ 'owl.theme.css' | asset_url | stylesheet_tag }}-->
+
+{{ 'font-awesome.min.css' | asset_url | stylesheet_tag }}
+
+<!-- menu css -->
+{{ 'jquery.dmenu.css' | asset_url | stylesheet_tag }}
+
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700,800' rel='stylesheet' type='text/css'>
+
+<!-- full page  css -->
+{{ 'jquery.fullPage.css' | asset_url | stylesheet_tag }}
+
+
+<!-- main query file -->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<!-- {{ 'jquery-3.3.1.min.js' | asset_url | script_tag }} -->
+<script src="{{ 'jquery.fancybox.js' | asset_url }}"></script>
+<script src="{{ 'jquery-ui.min.js' | asset_url }}"></script>
+
+<!-- Slick Slider Plugin ================================================== -->
+<script src="{{ 'slick.min.js' | asset_url }}"></script>
+
+<!-- Header hook for plugins ================================================== -->
+{{ content_for_header }}
+
+{% include 'oldIE-js' %}
+
+
+
+
+{% comment %}
+  If you store has customer accounts disabled, you can remove the following JS file
+{% endcomment %}
+{% if template contains 'customers' %}
+  {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+{% endif %}
+
+{% include 'fonts' %}
+
+<meta name="google-site-verification" content="dhnRyyO7-Q9QQkkAHxQLT4awQa4dHh5jkWbcwe8wZNk" />
+<meta name="google-site-verification" content="ENtJSny4ifEbMYGSx4aQbCvQr2umASr8qFi0Yj6Mm8c" />
+
+
+
+<!-- Hotjar Tracking Code for https://www.polarprofilters.com/ -->
+<!-- <script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:745599,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script> -->
+
+
+
+{% include 'ra-quickshop-init' %}
+
+<!-- GSSTART Coming Soon code start. Do not change -->
+<script type="text/javascript"> gsProductCSID = "{{ product.id }}"; </script><script type="text/javascript" src="https://gravity-software.com/js/shopify/pac_shop1776.js?v=523d380aecd5ed3cc609e4723e462a75"></script>
+<!-- Coming Soon code end. Do not change GSEND -->
+
+<!-- Affirm -->
+<script>
+_affirm_config = {
+   public_api_key:  "IOZ2U7T6OWK4BNE5",
+   script:          "https://cdn1.affirm.com/js/v2/affirm.js"
+};
+(function(l,g,m,e,a,f,b){var d,c=l[m]||{},h=document.createElement(f),n=document.getElementsByTagName(f)[0],k=function(a,b,c){return function(){a[b]._.push([c,arguments])}};c[e]=k(c,e,"set");d=c[e];c[a]={};c[a]._=[];d._=[];c[a][b]=k(c,a,b);a=0;for(b="set add save post open empty reset on off trigger ready setProduct".split(" ");a<b.length;a++)d[b[a]]=k(c,e,b[a]);a=0;for(b=["get","token","url","items"];a<b.length;a++)d[b[a]]=function(){};h.async=!0;h.src=g[f];n.parentNode.insertBefore(h,n);delete g[f];d(g);l[m]=c})(window,_affirm_config,"affirm","checkout","ui","script","ready");
+// Use your live public API Key and https://cdn1.affirm.com/js/v2/affirm.js script to point to Affirm production environment.
+</script>
+<!-- End Affirm -->
+
+
+</head>
+
+{% comment %}
+  Add the page template as a class for easy page or template specific styling.
+{% endcomment %}
+<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+
+{% include 'header-element' %}
+
+<main class="main-content" role="main">
+  {{ content_for_layout }}
+</main>
+
+
+{% include 'footer' %}
+
+
+
+<script src="{{ 'modernizr.min.js' | asset_url }}"></script>
+
+
+<!-- Instagram Plugin ================================================== -->
+{% if template == 'index' and settings.instagram_id != blank%}
+  {{ 'instafeed.js' | asset_url | script_tag }}
+  <script type="text/javascript">
+      var userFeed = new Instafeed({
+          get: 'user',
+          userId: {{ settings.instagram_id }},
+          clientId: 'c4d02e0d5f3d47168a966b69d93317de',
+          sortBy: 'most-recent',
+          resolution: 'standard_resolution',
+          limit: 6,
+          template: {%raw%}'<a href="{{link}}" class="grid__item large--one-sixth small--one-third medium--one-third"><span class="icon icon-instagram"></span><img src="{{image}}" /></a>'{%endraw%}
+      });
+      userFeed.run();
+  </script>
+{% endif %}
+
+<!-- IS+ Instant Search Widget -->
+<script async src="//acp-magento.appspot.com/js/acp-magento.js?v=3&mode=shopify&UUID=02b190e8-b394-4344-98d4-84fddcaea79d&store=10509944"></script>
+<!-- IS+ Instant Search Widget -->
+
+
+<!-- scroll overflow plugin for fullpage.js -->
+<script src="{{ 'scrolloverflow.min.js' | asset_url }}"></script>
+<!-- jquery fullpage.js -->
+<script src="{{ 'jquery.fullPage.js' | asset_url }}"></script>
+
+
+<script src="{{ 'owl.carousel.min.js' | asset_url }}"></script>
+<!-- <script src="{{ 'jquery.fancybox.js' | asset_url }}"></script> -->
+
+<!-- all custom js loaded -->
+<script src="{{ 'custom-polarpro.js' | asset_url }}"></script>
+
+<script src="{{ 'fastclick.min.js' | asset_url }}"></script>
+<script src="{{ 'shop.js' | asset_url }}"></script>
+
+
+
+<!-- page custom javascript -->
+<script type="text/javascript">
+	// custom jquery
+	// to link to specific variant on specific collection for the gradient 3 pack.
+
+	$(document).ready(function () {
+		if(window.location.pathname === "/collections/dji-mavic-air-filters-and-accessories"){
+			$("a[href='/collections/dji-mavic-air-filters-and-accessories/products/cinema-series-gradient-3-pack']").attr('href', '/collections/dji-mavic-air-filters-and-accessories/products/cinema-series-gradient-3-pack?variant=12231582580820')
+		}
+		if(window.location.pathname === "/collections/dji-mavic-filters-and-accessories"){
+			$("a[href='/collections/dji-mavic-filters-and-accessories/products/cinema-series-gradient-3-pack']").attr('href', '/collections/dji-mavic-filters-and-accessories/products/cinema-series-gradient-3-pack?variant=12233418440788')
+		}
+		if(window.location.pathname === "/collections/dji-phantom-4-pro"){
+			$("a[href='/collections/dji-phantom-4-pro/products/cinema-series-gradient-3-pack']").attr('href', '/collections/dji-phantom-4-pro/products/cinema-series-gradient-3-pack?variant=12233418473556')
+		}
+	});
+</script>
+
+
+
+{% comment %}
+  Carousel By HOD Dev
+{% endcomment %}
+
+{% comment %}
+  Template-specific js
+{% endcomment %}
+<script>
+  {% if newHash %}
+    $(function() {
+      timber.updateHash('{{ newHash }}');
+    });
+  {% endif %}
+  {% if resetPassword %}
+    $(function() {
+      timber.resetPasswordSuccess();
+    });
+  {% endif %}
+</script>
+
+{% comment %}
+  Ajaxify your cart with this plugin.
+  Documentation:
+    - http://shopify.com/timber#ajax-cart
+{% endcomment %}
+{% unless settings.cart_type == 'page' %}
+<!-- <script src="{{ 'handlebars.min.js' | asset_url }}"></script> -->
+{{ 'handlebars.min.js' | asset_url | script_tag }}
+{% include 'ajax-cart-template' %}
+<script src="{{ 'ajaxify.js' | asset_url }}"></script>
+
+<script>
+  jQuery(document).ready(function(){
+    var oldBrowser = $( "html" ).hasClass( "lt-ie9" );
+    if(!oldBrowser) {
+     ajaxifyShopify.init({
+       method: 'modal',
+       wrapperClass: 'wrapper',
+       formSelector: '#AddToCartForm',
+       addToCartSelector: '#AddToCart',
+       cartCountSelector: '.cartCount',
+       cartCostSelector: '.cartCost',
+       toggleCartButton: '.CartToggle',
+       useCartTemplate: true,
+       btnClass: 'btn',
+       moneyFormat: {{ shop.money_format | json }},
+       disableAjaxCart: false,
+       enableQtySelectors: true,
+       prependDrawerTo: 'body',
+       onToggleCallback: function(){
+         jQuery('body').trigger('ajaxCart.afterCartLoad')
+       }
+     });
+    }
+  });
+</script>
+{% endunless %}
+
+<script>
+  $(document).ready(function(){
+
+
+    {% comment %}
+      Mobile meganav expansion and contraction
+    {% endcomment %}
+    // $('.nav--mobile .accessibleNav .grandparent > a.nav-carat, .nav--mobile .accessibleNav .parent > a.nav-carat').on('click', function(event){
+    //   event.preventDefault();
+    //   $(this).closest('li').toggleClass('main-menu--expanded');
+    // });
+    //on hover mobile
+    $('.nav--mobile .accessibleNav li.parent > a, .nav--mobile .accessibleNav li.parent > a.nav-carat').on('click', function(event){
+      event.preventDefault();
+      $(this).closest('li').toggleClass('main-menu--expanded');
+    });
+
+    $('.menuToggle').on('click', function(event){
+      event.preventDefault();
+      $('.header-menu').toggleClass('main-menu--expanded');
+      $('.header-search').toggleClass('main-menu--expanded');
+    });
+
+    $('.pp-link-search').click(function(){
+    	$('.pp-search-con').toggle();
+    	return false;
+    });
+
+    {% comment %}
+      delay hiding of meganav to give the mouse time
+    {% endcomment %}
+    var hoverTimeout;
+    /*$('.grandparent').hover(function() {
+      clearTimeout(hoverTimeout);
+      $('.grandparent').addClass('hover');
+    },function() {
+      var $this=$(this);
+      hoverTimeout = setTimeout(function() {
+        $this.removeClass('hover');
+      },250);
+    });*/
+
+    {% comment %}
+      Smooth scroll anchor links
+    {% endcomment %}
+    // $(function() {
+    //   $('a[href*=\\#]:not([href=\\#]):not([data-toggle])').click(function() {
+    //     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    //       var target = $(this.hash);
+    //       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    //       if (target.length) {
+    //         $('html,body').animate({
+    //           scrollTop: target.offset().top
+    //         }, 1000);
+    //         return false;
+    //       }
+    //     }
+    //   });
+    // });
+    $('#homepageVideoClose').on( 'click', function(event){
+      event.preventDefault();
+      $('#homepageVideo').hide();
+      $('#homepageHero').show();
+      $('.homepage-hero-video').children().remove();
+    });
+    $('#homepageVideoPlay').on( 'click', function(event){
+      event.preventDefault();
+      $('#homepageVideo').show();
+      $('#homepageHero').hide();
+      $('.homepage-hero-video').each(function(){
+        var element = this;
+        var video_url = $(element).attr('data-video-url');
+        var player_id = 'vimeo-embed' + video_url;
+        var oembed_url = 'https://vimeo.com/api/oembed.json?url=' + encodeURIComponent(video_url) + '&maxwidth=1024&maxheight=500&api=true&player_id=' + player_id + '&autoplay=true&loop=false&byline=false&title=false&portrait=false&color={{ settings.color_splash | remove: "#" }}&callback=?';
+        $.getJSON(oembed_url, function(data) {
+          $(element).html(data.html);
+        });
+      });
+    });
+
+
+    {% comment %}
+      Collapse the nav based on the width of items + expanded search
+    {% endcomment %}
+    var detectNav = function(){
+      var navWidth = $('.nav--desktop .main-menu').outerWidth();
+      var logoWidth = $('.logo-wrapper').outerWidth();
+      var widthLimit = $('.site-header .wrapper').width();
+      var totalWidth = navWidth + logoWidth;
+
+      if ( totalWidth < widthLimit){
+        $('.site-header, .info-bar').addClass('showDesktop');
+        $('.site-header, .info-bar').removeClass('showMobile');
+      }
+      else {
+        $('.site-header, .info-bar').addClass('showMobile');
+        $('.site-header, .info-bar').removeClass('showDesktop');
+      }
+    };
+    {% comment %}
+      Callback for image loading based on Paul Irish method
+    {% endcomment %}
+    $.fn.imagesLoaded = function(callback, fireOne) {
+    var
+      args = arguments,
+      elems = this.filter('img'),
+      elemsLen = elems.length - 1;
+    elems
+      .bind('load', function(e) {
+          if (fireOne) {
+              !elemsLen-- && callback.call(elems, e);
+          } else {
+              callback.call(this, e);
+          }
+      }).each(function() {
+        // cached images don't fire load sometimes, so we reset src.
+        if (this.complete || this.complete === undefined){
+            this.src = this.src;
+        }
+      });
+    }
+    $(window).resize(function() {
+      detectNav();
+      {% if settings.homepage_hero_height == '300px' %}
+      {% comment %}
+        Resize the hero section if 100% height
+        is selected in the theme settings
+      {% endcomment %}
+      var windowHeight = $(window).height();
+      var navHeight = ($('.header__wrapper').height());
+      var heroHeight = windowHeight - navHeight;
+      var heroContentHeight = $('#homepageHeroContent').height();
+      $('#homepageHero').height(heroHeight);
+      $('#homepageHeroContent').css('margin-top', function() {
+        return (heroHeight/2) - (heroContentHeight/2);
+      });
+      {% endif %}
+    }).resize();
+    {% if settings.homepage_hero_cta_image_enable %}
+    $('#ctaImage').imagesLoaded(function() {
+      $(window).resize();
+    });
+    {% endif %}
+    $('.logo-image').imagesLoaded(function() {
+      $(window).resize();
+    });
+    $(window).on("load", function (e){
+    // changed because .window is no longer work on jquery 3
+    // $(window).load(function(){
+      $(window).resize();
+    });
+
+    {% comment %}
+      Position the logo on the edge of the footer.
+    {% endcomment %}
+    $('#footerLogoImg').imagesLoaded(function() {
+        var logoHeight = $('#footerLogoImg').height();
+        var logoOffset = ( logoHeight/-2 );
+        var logoWidth = $('#footerLogoImg').width();
+        var logoHorizontalOffset = ( logoWidth/-2 );
+        $('#footerLogo').css('top', logoOffset);
+        $('#footerLogo').css('margin-left', logoHorizontalOffset);
+        $('#footerLogo').css('opacity', '1');
+    });
+  });
+</script>
+{% comment %} Beetailer Facebook store and social widget plugins code below {% endcomment %}
+{% comment %}
+{% include 'beetailer' %}
+{% endcomment %}
+<!-- Google Code for Remarketing Tag -->
+<!---Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+  var google_tag_params = {
+  ecomm_prodid: 'REPLACE_WITH_VALUE',
+  ecomm_pagetype: 'REPLACE_WITH_VALUE',
+  ecomm_totalvalue: 'REPLACE_WITH_VALUE',
+  };
+  </script>
+  <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1009582774;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1009582774/?guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+
+
+{% if template != 'cart' %}
+<script>
+  $(function(){
+    function hideUpsellVariants() {
+      setTimeout(function() {
+        {% for variant in product.variants %}
+          {% if variant.title contains "Booster UP" %}
+            $('select option').filter(function() {
+              return $(this).text().indexOf({{ variant.option1 | json }}) !== -1;
+            }).remove();
+            $('div, label,ul li, .dropdown *').filter(function(){
+                var snippet = $(this).html();
+                var val = $(this).data('value');
+                return (snippet  && (snippet == {{ variant.option1 | json }})) || (val && (val.indexOf({{ variant.option1 | json }}) !== -1));
+            }).remove();
+          {% endif %}
+        {% endfor %}
+
+        $('div, label,ul li, .dropdown *').filter(function() {
+          return ($(this).data('value') == 'Default Title');
+        }).hide();
+        $('select option').filter(function() {
+          return $(this).text() == 'Default Title';
+        }).hide();
+
+        $.each($('.single-option-selector'), function(i, val) {
+          var option = $(val).find('option');
+          if (option.length <= 1) {
+          if (option.first().length && option.first().text().indexOf(defaultTitleText) != -1) {
+            $(val).hide();
+          }
+        }
+      });
+
+      $('.single-option-selector').trigger('change');
+      }, 100);
+    }
+    hideUpsellVariants();
+  });
+</script>
+{% endif %}
+
+ <!-- CRITEO START -->
+{% include 'criteo-tracking' %}
+<!-- CRITEO END -->
+
+<script>
+jQuery(function() {
+  jQuery('.swatch :radio').change(function() {
+    var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
+    var optionValue = jQuery(this).val();
+    jQuery(this)
+      .closest('form')
+      .find('.single-option-selector')
+      .eq(optionIndex)
+      .val(optionValue)
+      .trigger('change');
+  });
+});
+
+
+// $( ".s4com-helpcenter" ).prepend( "<div class='faq-links-container'><a href='/pages/support-2-0?view=support' id='faq-support-link'>Support</a><a href='#' id='faq-my-order-link'>My Order</a><a href='#' id='faq-contact-us-link'>Contact Us</a><a href='#' id='faq-returns-link'>Returns</a><a href='#' id='faq-shipping-link'>Shipping</a><a href='#' id='faq-warranty-link'>Warranty</a></div>" );
+// $( ".s4com-helpcenter" ).prepend( "<div class='faq-links-container'><a href='/pages/support' id='faq-support-link'>Back to Support</a></div>" );
+$( ".s4com-helpcenter" ).prepend( "<nav class='breadcrumb back-to-support' role='navigation' aria-label='breadcrumbs'><a href='/pages/support' title='support home'>Back to Support</a></nav>" );
+</script>
+
+
+<!-- addroll pixel tracking -->
+<script type="text/javascript">
+   adroll_adv_id = "QWL3VUDAWVC3PIXQS7OGUV";
+   adroll_pix_id = "4MZ6IEQ3ARDAJBNM4W4KCN";
+   /* OPTIONAL: provide email to improve user identification */
+   /* adroll_email = "username@example.com"; */
+   (function () {
+       var _onload = function(){
+           if (document.readyState && !/loaded|complete/.test(document.readyState)){setTimeout(_onload, 10);return}
+           if (!window.__adroll_loaded){__adroll_loaded=true;setTimeout(_onload, 50);return}
+           var scr = document.createElement("script");
+           var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+           scr.setAttribute('async', 'true');
+           scr.type = "text/javascript";
+           scr.src = host + "/j/roundtrip.js";
+           ((document.getElementsByTagName('head') || [null])[0] ||
+               document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+       };
+       if (window.addEventListener) {window.addEventListener('load', _onload, false);}
+       else {window.attachEvent('onload', _onload)}
+   }());
+</script>
+<!-- addroll pixel tracking end-->
+
+
+<script>
+  /* Product Tag Filters - Good for any number of filters on any type of collection pages */
+  var collFilters = jQuery('.coll-filter');
+  collFilters.change(function() {
+    var newTags = [];
+    collFilters.each(function() {
+      if (jQuery(this).val()) {
+        newTags.push(jQuery(this).val());
+      }
+    });
+    if (newTags.length) {
+      var query = newTags.join('+');
+      window.location.href = jQuery('{{ 'tag' | link_to_tag: 'tag' }}').attr('href').replace('/' + 'tag', '/' + query);
+    }
+    else {
+      {% if collection.handle %}
+      window.location.href = '/collections/{{ collection.handle }}';
+      {% elsif collection.products.first.type == collection.title %}
+      window.location.href = '{{ collection.title | url_for_type }}';
+      {% elsif collection.products.first.vendor == collection.title %}
+      window.location.href = '{{ collection.title | url_for_vendor }}';
+      {% endif %}
+    }
+  });
+
+</script>
+
+
+
+{% include 'mw_PO_objects' %}</body>
+</html>

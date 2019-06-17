@@ -1,0 +1,58 @@
+<!-- /templates/page.newfilterline.liquid -->
+
+
+<div class='buy-back-filter'>
+  <div class='banner-top'>
+  </div>
+  <div class='banner-mid'>
+    <div class="new-line-filter-container wrapper">
+      <h3>QuartzLine Upgrade Program Overview</h3>
+      <p class='intro'>Featuring near perfect target transmission and optical multi coatings for enhanced scratch resistance, water resistance, anti-reflectivity and reduced vignetting, QuartzLine filters are guaranteed for a lifetime of delivering true-to-life colors, from the most extreme locations on the planet.  But don’t just take our word for it; we want you to see for yourself.  Send us your current camera filters and we’ll give you an upgrade credit good toward our new QuartzLine filters.</p>
+      <p>How it works:</p>
+      <ul>
+        <li>Receive a $20 Credit for 37mm and 46mm filter sizes</li>
+        <li>Receive a $40 Credit for 67mm, 77mm, and 82mm filter sizes</li>
+        <li>One credit/discount issued per filter sent in</li>
+        <li>After agreeing to the terms and conditions below, use your generated coupon code during checkout</li>
+      </ul>
+      <br />
+      <p>What To Know:</p>
+      <ul>
+        <li>You can upgrade as many filters as you want (you will need to send in one filter for each order using the discount)</li>
+        <li>We’ll send a prepaid label with your QuartzLine order. After you receive your  order, ship us your old filter(s). Feel free to use the same box!</li>
+        <li>Don’t worry, we recycle/repurpose your old filters</li>
+      </ul>
+
+      <!-- <p style='text-align: center; font-size: 13px;'>*Offer ends May 15th, 2018*</p> -->
+      <br>
+      <div class='term'>Click “I agree” to receive your QuartzLine upgrade code.<br />  Return filters must be postmarked within 14 days of receiving your new QuartzLine filter.</div>
+
+      <div class='i-agree'><input type="checkbox" id="myCheck"  onclick="myFunction()"> I agree to the Terms and Conditions</div>
+      <div id="coupon" style="display:none">
+        <p>$20 Credit - 37mm / 46mm : <span>QL-3746</span><p>
+        <p>$40 Credit - 67mm / 77mm / 82mm : <span>QL-677782</span></p>
+        <br />
+        <a href='/products/quartzline-filters' class='back-to-quartzline'>Back to QuartzLine Page</a>
+      </div>
+
+      {{ page.content }}
+    </div>
+
+  </div>
+  <div class='banner-bottom'>
+
+  </div>
+</div>
+
+
+<script>
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("coupon");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+</script>

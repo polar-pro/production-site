@@ -1,0 +1,23 @@
+<!-- /snippets/collection-grid-item.liquid -->
+
+{% assign collection_item_width = {{settings.products_grid_width}} %}
+{% unless collection_item_width %}
+  {% assign collection_item_width = 'medium--one-half large--one-third' %}
+{% endunless %}
+
+<div class="grid__item {{collection_item_width}} product-grid-item">
+  {% capture collection_title %}{{ collection.title | escape }}{% endcapture %}
+  <a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: collection_title }}" class="grid__image">
+    {% if collection.image %}
+      {{ collection.image.src | img_url: 'large' | img_tag: collection_title }}
+    {% else %}
+      {{ collection.products.first.featured_image | img_url: 'large' | img_tag: collection_title }}
+    {% endif %}
+  </a>
+  <div class="figcaption {{ settings.product_grid_style }}">
+    <a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: collection_title }}">
+      <p class="h6 name_wrapper">{{ collection.title }}</p>
+      <p class="price_wrapper">{{ 'collections.general.items_with_count' | t: count: collection.all_products_count }}</p>
+    </a>
+  </div>
+</div>

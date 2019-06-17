@@ -1,0 +1,26 @@
+<!-- /templates/page.liquid -->
+<div class="wrapper page-margin">
+
+  <div class="grid__item">
+    {% comment %}<h2 class="title text-center">{{ page.title }}</h2>{% endcomment %}
+    {% comment %}
+      Regular page content goes here.
+    {% endcomment %}
+    <div class="rte">
+      {{ page.content }}
+    </div>
+  </div>
+
+</div>
+
+
+<div class="support-by-products wrapper">
+  <h2>Support By Categories</h2>
+	<div class="grid-uniform">
+  	{% for link in linklists.support-by-products-all.links %}
+    	<div class="grid__item large--one-quarter">
+  		    <a class='{{ link.title | handleize }}' href="{{ link.url }}" title="{{ link.title | handleize }}">{{ link.title }}</a>
+      </div>
+    {% endfor %}
+  </div>
+</div>

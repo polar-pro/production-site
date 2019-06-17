@@ -1,0 +1,150 @@
+<div class='top-header-wrapper'>
+  <div class="top-text-notice">
+    <div class="wrapper">
+      <div class="grid-uniform">
+        <div class="grid__item large--one-whole">
+          <div class="ttn-content">
+            <div class="item free-shipping">
+              <img src="{{ 'Free-US-Shipping.svg' | asset_url }}" alt="">
+              Free US Shipping
+            </div>
+            <div class="item lifetime-warranty">
+              <img src="{{ 'Lifetime-Warranty.svg' | asset_url }}" alt="">
+              Lifetime Warranty
+            </div>
+            <div class="item sixty-days-return">
+              <img src="{{ '60-day-returns.svg' | asset_url }}" alt="">
+              60-Day Returns
+            </div>
+            <!-- <div class="us-shipping" >Free Standard Shipping On All Domestic Orders | Lifetime Warranty | 60-Day Returns</div> -->
+            <!-- <div class="social-media-top"><div class="pp-header-social">{% include 'top-social-media' %}</div></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header__wrapper">
+    <div class="polarpro-top-header">
+      <div class="wrapper-full">
+        <div class="grid-uniform">
+          <div class="grid__item large--one-sixth main-logo">
+            <div class="polarpro-logo-container small--hide medium--hide small--medium">
+              <div class="{% if settings.logo_use_image %}logo-wrapper--image{% endif %}">
+              {% if template == 'index' %}
+                <h1 class="h4 header-logo" itemscope itemtype="http://schema.org/Organization">
+              {% else %}
+                <div class="h4 header-logo" itemscope itemtype="http://schema.org/Organization">
+              {% endif %}
+                <a href="/" itemprop="url">
+                <img src="{{ 'polarpro_main_logo.png' | asset_url }}" alt="{{ shop.name }}" style="max-height: 51px;" />
+                </a>
+              {% if template == 'index' %}
+                </h1>
+              {% else %}
+                </div>
+              {% endif %}
+              </div>
+            </div>
+            <div class="small--show medium--show">
+                <div class="nav--mobile">
+                  {% include 'nav-contents-mobile' %}
+               </div>
+            </div>
+          </div>
+          <div class="grid__item large--two-thirds small--hide small--medium main-menu-top">
+            <div class="polarpro-menu-container pp-desktop-nav">
+              {% include 'nav-contents' %}
+              <script type="text/javascript">(function(d) { var e = d.createElement('script'); e.src = d.location.protocol+'//get.exitintel.com/load.js?exitintelAccount=283'; e.async = true; e.setAttribute("data-cfasync","false"); d.getElementsByTagName("head")[0].appendChild(e); }(document));</script>
+            </div>
+          </div>
+          <div class="grid__item large--one-sixth user-tools">
+
+            <div class="user-container">
+              {% if customer %}
+                <a href="/account" title="My Account"><i class="fa fa-user" aria-hidden="true"></i></a>
+              {% else %}
+                <a href="/account/register" title="My Account"><i class="fa fa-user" aria-hidden="true"></i></a>
+              {% endif %}
+            </div>
+
+
+            <div class="tool-links">
+              <a href="/cart" title="Cart">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                {% if cart.item_count > 0 %}
+                  <span class='total-item'>{{ cart.item_count }}</span>
+                {% endif %}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!--header__wrapper end-->
+</div><!--top-header-wrapper end-->
+
+{% if settings.header_enable_search %}
+  <div class="header-search__wrapper">
+    <div class="header-search">
+      <form action="/search" method="get" class="input-group search" role="search">
+        {% if settings.search_only_products %}<input type="hidden" name="type" value="product">{% endif %}
+        <input class="search-bar" type="search" name="q" placeholder="Search Products">
+        <button type="submit" class="btn search-btn"></button>
+      </form>
+    </div>
+  </div>
+{% endif %}
+
+
+
+<!-- menu javascript -->
+{{ 'jquery.dmenu.js' | asset_url | script_tag }}
+
+<script type="text/javascript">
+$(window).load(function() {
+  $('#menu').dmenu({
+    menu  : {
+      logo      : false,
+      align     : 'left'
+    },
+    item  : {
+      bg        : false,
+      border      : false,
+      subindicator  : true,
+
+      fit     : [
+        {
+          items     : null,
+          fitter    : 'icon-hide',
+          order   : 'all'
+        },
+        {
+          items     : null,
+          fitter    : 'icon-only',
+          order   : 'all'
+        },
+        {
+          // items     : ':not(.dm-item_align-right)',
+          fitter    : 'submenu',
+          order   : 'rtl'
+        },
+        {
+          // items     : ':not(.dm-item_align-right)',
+          fitter    : 'hide',
+          order   : 'rtl'
+        }
+      ]
+    },
+    submenu : {
+      arrow     : false,
+      border      : false,
+      shadow      : true
+    },
+    subitem : {
+      bg        : false,
+      border      : false
+    }
+  }).fadeIn( "faster" );
+});
+</script>

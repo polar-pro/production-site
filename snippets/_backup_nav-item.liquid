@@ -1,0 +1,232 @@
+{% assign child_list_handle = link.title | handleize %}
+<li class="polarpro-menu-list">
+  <a href="{{ link.url }}" class='{{ link.title | camelcase }}'><span class='tag'>NEW</span>{{ link.title | escape }}</a>
+  <div class="main-menu-dropdown dropdown-{{ link.title | camelcase }}">
+		<div class="mmd-container">
+          	<div class="wrapper">
+              {% if child_list_handle == 'products' %}
+              <div class="grid-uniform">
+                  <div class="grid__item large--one-third">
+                      <div class="pp-menu-items pp-menu-drone">
+                        <h3 class="pp-sub-menu-title"><a href='/pages/shop-by-aircraft'>Drone</a></h3>
+                        <ul class="pp-sub-menu">
+                          {% assign drone_menu = 'drones-4-0' %}
+                          {% for link in linklists[drone_menu].links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                  </div>
+                  <div class="grid__item large--one-third">
+                      <div class="pp-menu-items pp-menu-camera">
+                        <h3 class="pp-sub-menu-title"><a href='/collections/camera'>Camera</a></h3>
+                        <ul class="pp-sub-menu">
+                          {% assign camera_menu = 'camera' %}
+                          {% for link in linklists[camera_menu].links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      {% comment %}
+                      <div class="pp-menu-items pp-menu-full-frame">
+                        <h3 class="pp-sub-menu-title">Full-Frame Filters</h3>
+                        <ul class="pp-sub-menu">
+                          {% assign ff_menu = 'full-frame-filters' %}
+                          {% for link in linklists[ff_menu].links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                   	  <div class="pp-menu-items pp-menu-mobile">
+                        <h3 class="pp-sub-menu-title">Mobile Imaging</h3>
+                        <ul class="pp-sub-menu">
+                          {% assign mobile_menu = 'mobile-imaging' %}
+                          {% for link in linklists[mobile_menu].links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      {% endcomment %}
+                  </div>
+                  <div class="grid__item large--one-third">
+                    <div class="pp-menu-items pp-menu-gopro">
+                      <h3 class="pp-sub-menu-title"><a href='/pages/shop-by-device'>GoPro</a></h3>
+                      <ul class="pp-sub-menu">
+                        {% assign gopro_menu = 'gopro-2-0' %}
+                        {% for link in linklists[gopro_menu].links %}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                      {% comment %}
+                      <div class="pp-menu-items pp-menu-production">
+                        <h3 class="pp-sub-menu-title">Production</h3>
+                        <ul class="pp-sub-menu">
+                          {% assign production_menu = 'production' %}
+                          {% for link in linklists[production_menu].links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                    {% endcomment %}
+                  </div>
+                  <div class="grid__item large--one-third">
+                    <div class="pp-menu-items pp-menu-studio">
+                      <h3 class="pp-sub-menu-title">Studio</h3>
+                      <ul class="pp-sub-menu">
+                        {% assign studio_menu = 'studio' %}
+                        {% for link in linklists[studio_menu].links %}
+                          <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="grid__item large--one-third">
+                      <div class="pp-menu-items pp-menu-mobile">
+                        <h3 class="pp-sub-menu-title"><a href='/collections/mobile-collection'>Mobile</a></h3>
+                        <ul class="pp-sub-menu">
+                          {% assign mobile_filters_menu = 'mobile-filters' %}
+                          {% for link in linklists[mobile_filters_menu].links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                  </div>
+
+                  <div class="grid__item large--one-third">
+                      <div class="pp-menu-items pp-menu-osmopocket">
+                        <h3 class="pp-sub-menu-title"><a href='/collections/osmo-pocket-filters-accessories'>Osmo Pocket</a></h3>
+                      </div>
+                  </div>
+
+                  <!-- <div class="grid__item large--one-third">
+                      <div class="pp-menu-items pp-menu-edu">
+                        <h3 class="pp-sub-menu-title"><a href='/pages/edu'>EDU</a></h3>
+                        <ul class="pp-sub-menu">
+                          {% assign edu_menu = 'edu' %}
+                          {% for link in linklists[edu_menu].links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div>
+                  </div> -->
+
+
+                  <!-- <div class="grid__item large--one-third"> -->
+                      <!-- <div class="pp-menu-items pp-menu-dji-goggles">
+                        <h3 class="pp-sub-menu-title"><a href='/collections/dji-goggles'>DJI Goggles</a></h3>
+                      </div> -->
+                      <!-- <div class="pp-menu-items pp-menu-crystal-sky">
+                        <h3 class="pp-sub-menu-title"><a href='/collections/dji-crystalsky'>CrystalSky</a></h3>
+                        <ul class="pp-sub-menu">
+                          {% assign crystalsky_menu = 'crystalsky' %}
+                          {% for link in linklists[crystalsky_menu].links %}
+                            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                      </div> -->
+                  <!-- </div> -->
+
+
+              </div>
+              {% endif; %}
+
+
+              {% if child_list_handle == 'custom-shop' %}
+
+              <div class="grid-uniform">
+                  <div class="grid__item large--one-third">
+                      <div class="pp-menu-items pp-menu-ql">
+                        <h3 class="pp-sub-menu-title"><a href='/collections/quartzline-custom-filter-sets'>QuartzLine</a></h3>
+                      </div>
+                  </div>
+                  <div class="grid__item large--one-third">
+                      <div class="pp-menu-items pp-menu-mavic-2">
+                        <h3 class="pp-sub-menu-title"><a href='/collections/mavic-2-custom-filter-sets'>Mavic 2</a></h3>
+                      </div>
+                  </div>
+                  <div class="grid__item large--one-third">
+                      <div class="pp-menu-items pp-menu-mavic-air">
+                        <h3 class="pp-sub-menu-title"><a href='/collections/mavic-air-custom-shop'>Mavic Air</a></h3>
+                      </div>
+                  </div>
+                  <div class="grid__item large--one-third">
+                    <div class="pp-menu-items pp-menu-mavic-pro">
+                      <h3 class="pp-sub-menu-title"><a href='/collections/mavic-pro-platinum-custom-shop'>Mavic Pro/Platinum</a></h3>
+                    </div>
+                  </div>
+                  <div class="grid__item large--one-third">
+                    <div class="pp-menu-items pp-menu-phantom4">
+                      <h3 class="pp-sub-menu-title"><a href='/collections/phantom-4-pro-adv-custom-filter-sets'>Phantom 4 Pro/Adv</a></h3>
+                    </div>
+                  </div>
+
+                  <div class="grid__item large--one-third">
+                      <div class="pp-menu-items pp-menu-drone">
+                        <h3 class="pp-sub-menu-title"><a href='/collections/inspire-2-custom-shop'>Inspire 2</a></h3>
+                      </div>
+                  </div>
+              </div>
+              {% endif; %}
+
+              {% if child_list_handle == 'explore' %}
+			        <div class="grid-uniform">
+                <div class="grid__item medium--one-quarter large--one-fifth">
+                  <div class="pp-menu-items no-icon">
+                    <h3 class="pp-sub-menu-title"><a href="/pages/meet-the-team" class=''>Who We Are</a></h3>
+                  </div>
+                </div>
+                <div class="grid__item medium--one-quarter large--one-fifth">
+                  <div class="pp-menu-items no-icon">
+                    <h3 class="pp-sub-menu-title"><a href="/pages/team-polarpro" class=''>Pro Team</a></h3>
+                  </div>
+                </div>
+                <div class="grid__item medium--one-quarter large--one-fifth">
+                  <div class="pp-menu-items no-icon">
+                    <h3 class="pp-sub-menu-title"><a href="/pages/blog" class=''>Blog</a></h3>
+                  </div>
+                </div>
+                <div class="grid__item medium--one-quarter large--one-fifth">
+                  <div class="pp-menu-items no-icon">
+                    <h3 class="pp-sub-menu-title"><a href="/pages/polarpro" class=''>#captureperfection</a></h3>
+                  </div>
+                </div>
+              </div>
+			        {% endif; %}
+
+              {% if child_list_handle == 'support' %}
+              <div class="grid-uniform">
+                <div class="grid__item medium--one-quarter large--one-fifth">
+                  <div class="pp-menu-items no-icon">
+                    <h3 class="pp-sub-menu-title"><a href="/pages/support" class='linkable'>Support</a></h3>
+                    <!-- <ul class="pp-sub-menu">
+                      {% assign orders_menu = 'orders-2-0' %}
+                      {% for link in linklists[orders_menu].links %}
+                        <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                      {% endfor %}
+                    </ul> -->
+                  </div>
+                </div>
+                <div class="grid__item medium--one-quarter large--one-fifth">
+                  <div class="pp-menu-items no-icon">
+                    <h3 class="pp-sub-menu-title"><a href="/pages/contact-us" class=''>Contact Us</a></h3>
+                  </div>
+                </div>
+                <div class="grid__item medium--one-quarter large--one-fifth">
+                  <div class="pp-menu-items no-icon">
+                    <h3 class="pp-sub-menu-title"><a href="/apps/store-locator" class=''>Store Locator</a></h3>
+                  </div>
+                </div>
+
+                <div class="grid__item medium--one-quarter large--one-fifth">
+                  <div class="pp-menu-items no-icon">
+                    <h3 class="pp-sub-menu-title"><a href="/tools/faq" class=''>FAQ</a></h3>
+                  </div>
+                </div>
+			        </div>
+              {% endif; %}
+          	</div>
+    	</div>
+  </div>
+</li>

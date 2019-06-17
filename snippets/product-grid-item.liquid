@@ -1,0 +1,127 @@
+{% assign form_action = '/cart/add'%}
+{% assign form_method = 'post'%}
+{% assign form_id = "AddToCartForm" %}
+{% assign show_quantity = settings.product_quantity %}
+
+<!-- /snippets/product-grid-item.liquid -->
+{% comment %}
+
+  This snippet is used to showcase each product during the loop,
+  'for product in collection.products' in collection.liquid.
+
+  A liquid variable (grid_item_width) is set just before the this
+  snippet is included to change the size of the container.
+  Once the variable is set on a page, all future instances of this
+  snippet will use that width. Overwrite the variable to adjust this.
+
+  Example
+    - assign grid_item_width = 'large--one-quarter medium--one-half'
+
+{% endcomment %}
+
+{% comment %}
+  Set the default grid_item_width if no variable is set
+{% endcomment %}
+{% unless grid_item_width %}
+  {% assign grid_item_width = 'large--one-quarter medium--one-half' %}
+{% endunless %}
+
+{% comment %}
+  Check if the product is on sale and set a variable to be used below.
+{% endcomment %}
+{% assign on_sale = false %}
+{% if product.compare_at_price > product.price %}
+  {% assign on_sale = true %}
+{% endif %}
+
+{% comment %}
+  Check if the product is sold out and set a variable to be used below.
+{% endcomment %}
+{% assign sold_out = true %}
+{% if product.available  %}
+  {% assign sold_out = false %}
+{% endif %}
+
+<div class="grid__item {{grid_item_width}}{% if on_sale %} on-sale{% endif %}  product-grid-item">
+
+  {% comment %}
+    Link to your product with the 'within: collection' filter for the link to be aware of the collection.
+    This allows you to create collection-based navigation on the product page.
+
+    Results of using 'within: collection':
+    - Instead of a URL with /products/product-handle
+      you would get /collections/collection-handle/products/product-handle
+
+    For more info on navigation within a collection
+      - http://docs.shopify.com/support/your-store/collections/how-to-navigate-within-a-collection
+
+  {% endcomment %}
+  <a href="{{ product.url | within: collection }}" class="grid__image">
+    <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+  </a>
+
+
+  <div class="figcaption {{ settings.product_grid_style }}">
+    <a href="{{ product.url | within: collection | capitalize }}">
+      <p class="h6 name_wrapper">
+        {{ product.title }}
+      </p>
+      <p class="price_wrapper">
+        <span class="price">
+          {% if product.price_varies %}{{ 'products.general.from' | t }} {% endif %}
+          <span class="money">{{ product.price | money }}</span>
+        </span>
+        {% if sold_out %}
+        <br><em>{{ 'products.product.sold_out' | t }}</em>
+        {% endif %}
+        {% if on_sale %}
+        <span class="compare-at">
+          <span class="money">{{ product.compare_at_price | money }}</span>
+        </span>
+        {% endif %}
+        {% comment %}
+        {% if product.metafields.spr.reviews %}
+          <br>
+          <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+        {% endif %}
+        {% endcomment %}
+      </p>
+    </a>
+  </div>
+
+  {% comment %}
+  <div class="quick-view">
+    <a href="{{ product.url | within: collection }}" class="">
+      <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+    </a>
+    <br />
+    <a href="{{ product.url | within: collection | capitalize }}">
+      <p class="h6 name_wrapper">
+        {{ product.title }}
+      </p>
+    </a>
+
+    <div class="purchase-container">
+      {% if sold_out %}
+        <em>{{ 'products.product.sold_out' | t }}</em>
+      {% endif %}
+      <a href="{{ product.url | within: collection }}" class='more-info-btn'>More Info</a>
+
+      <form action="{{ form_action }}" method="{{form_method}}" enctype="multipart/form-data" id="{{form_id}}" class="{{form_class}}">
+      <!-- <form method="post" action="/cart/add"> -->
+        {% if include_customer_id %}
+          <input type="hidden" name="customer_id" value="{{customer.id}}"></input>
+        {% endif %}
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+        <!-- <input type="submit" value="Add to cart" class="btn" /> -->
+        <button type="submit" name="add" id="AddToCart" class="btn btn--large btn--full btn--clear uppercase quickbuy-btn">
+          <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }} </span>
+        </button>
+      </form>
+    </div>
+  </div>
+  {% endcomment %}
+
+
+<span class="shopify-product-quickshop-button" data-id="{{product.handle}}"></span>
+</div>

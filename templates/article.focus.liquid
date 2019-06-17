@@ -1,0 +1,133 @@
+<!-- /templates/article.liquid -->
+{% comment %}
+
+  Comments will not appear right after they are submitted, either to be checked for spam
+  or to await moderation. When a comment is submitted, the browser is redirected to a page
+  that includes the new comment id in its URL.
+    Example: http://shopname.myshopify.com/blogs/news/2022072-my-post?comment=3721372
+
+  More information:
+    - http://docs.shopify.com/themes/liquid-variables/comment
+
+{% endcomment %}
+
+{% assign number_of_comments = article.comments_count %}
+
+{% comment %}
+  If a comment was just submitted and it has no blank fields, we have an extra comment to count.
+{% endcomment %}
+{% if comment and comment.created_at %}
+  {% assign number_of_comments = article.comments_count | plus: 1 %}
+{% endif %}
+
+<div class="focus-banner" style='background: url({{ article.metafields["global"]["focus-main-banner"] }}); background-size: cover; display: block; min-height: 560px; height: 30vw; background-position: center center;'>
+  <div class="wrapper">
+    <div class="focus-id desktop">
+      <div class="episode">
+        Episode <span>{{ article.metafields["global"]["focus-episode-number"] }}</span>
+      </div>
+      <div class="title">
+        {{ article.title }}
+      </div>
+      <a class="polarpro-btn watch-focus-btn watch-now fancybox fancybox.iframe" href="{{ article.metafields["global"]["focus-main-video"] }}" target="_blank">Watch Now</a>
+      <!-- <div class="name">
+        By {{ article.metafields["global"]["focus-by"] }}
+      </div> -->
+    </div>
+  </div>
+  <!-- <img src="{{ article.image.src | img_url: 'master' }}"> -->
+  <!-- <video autoplay loop id="video-background" muted plays-inline>
+    <source src="{{ article.metafields["global"]["focus-main-video-banner"] }}" type="video/mp4">
+  </video> -->
+</div>
+
+<div class="focus-id mobile">
+  <div class="episode">
+    Episode <span>{{ article.metafields["global"]["focus-episode-number"] }}</span>
+  </div>
+  <div class="title">
+    {{ article.title }}
+  </div>
+  <a class="polarpro-btn watch-focus-btn watch-now fancybox fancybox.iframe" href="{{ article.metafields["global"]["focus-main-video"] }}" target="_blank">Watch Now</a>
+  <!-- <div class="name">
+    By {{ article.metafields["global"]["focus-by"] }}
+  </div> -->
+</div>
+
+
+<div class="wrapper page-margin focus-internal-container {{ article.metafields["global"]["focus-color-theme"] }}">
+  <div class="primary">
+
+    <div class="main-bio">
+      <img src="{{ article.metafields["global"]["focus-meet-img"] }}" alt="">
+      <p>{{ article.content }}</p>
+    </div>
+    <div class="share-sidebar">
+      <h3>Share<span>Content</span></h3>
+      <ul>
+        <li>
+          <a class='facebook-share link-share' href="javascript:window.open('http://www.facebook.com/sharer.php?u=https://www.polarprofilters.com{{ article.url }}', '_blank', 'width=400,height=500');void(0);"></a>
+        </li>
+        <li>
+          <!-- <a href="https://twitter.com/share?text=thisisatest" target="_blank" class='twitter-share link-share'></a> -->
+          <a class='twitter-share link-share' href="javascript:window.open('https://twitter.com/share?text=Watch {{ article.title }} at', '_blank', 'width=400,height=500');void(0);"></a>
+        </li>
+        <li>
+          <a href="#" onclick="copyURL()" class='web-share link-share'></a>
+        </li>
+      </ul>
+      <a href="/pages/focus" class='back-to-focus'>Back to <span>Focus</span></a>
+    </div>
+
+  </div>
+  <div class="secondary">
+    <div class="quote">
+      <div class="text">
+        <!-- <img class='quote-mark' src="{{ 'focus-quote-mark.png' | asset_url }}"> -->
+        <div class="quote-mark"></div>
+        {{ article.metafields["global"]["focus-quote"] }}
+        <a class="polarpro-btn watch-focus-btn watch-now fancybox fancybox.iframe" href="{{ article.metafields["global"]["focus-main-video"] }}" target="_blank">Watch The Film</a>
+      </div>
+      <div class="image">
+        <img src="{{ article.metafields["global"]["focus-quote-img"] }}" alt="">
+      </div>
+    </div>
+
+    <div class="film-by">
+      <h3>A FILM BY</h3>
+      <div class="item director">
+        <div class="image">
+          <img src="{{ article.metafields["global"]["focus-director-img"] }}" alt="">
+        </div>
+        <div class="data">
+          <p class='title'>DIRECTOR</p>
+          <div class="name">
+            {{ article.metafields["global"]["focus-director"] }}
+          </div>
+        </div>
+      </div>
+
+      {% if article.metafields["global"]["focus-cameraman-img"] != blank %}
+      <div class="item cameraman">
+        <div class="data">
+          <p class='title'>CAMERAMAN</p>
+          <div class="name">
+            {{ article.metafields["global"]["focus-cameraman"] }}
+          </div>
+        </div>
+        <div class="image">
+          <img src="{{ article.metafields["global"]["focus-cameraman-img"] }}" alt="">
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+window.copyURL = function(){
+  prompt("Press [Ctrl + c] to copy the url :",window.location);
+}
+
+</script>

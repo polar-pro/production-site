@@ -1,0 +1,97 @@
+
+<!-- /templates/page.liquid -->
+<div class="golden-hour-banner video-banner">
+  <video autoplay loop id="video-background" muted plays-inline preload="none" src="{{ 'golden-hour-header.mp4' | asset_url }}">
+
+  </video>
+  <div class="wrapper text-container">
+    <img src="{{ 'golden-hour-podcast-logo.png' | asset_url }}" class='golden-hour-logo'>
+    <p>Jump into the conversation with host Dave Maze who gets to know a diverse assortment of creatives from photographers/videographers to entrepreneurs who have taken their creative skills and built a business.</p>
+  </div>
+</div>
+<div class="page-margin golden-hour-container" style='z-index: 1;'>
+  <div class="wrapper">
+    <h3 class='episodes-header'>Episodes</h3>
+    <div class="grid grid-uniform">
+
+      {% for article in blogs.golden-hour-podcast.articles %}
+      {% if article.tags contains 'Golden-Hour' %}
+      <div class="grid__item large--one-third medium--one-half">
+        <div class="golden-hour-item-container">
+
+
+          {% if article.metafields.global.golden-hour-youtube %}
+          <a class="image golden-hour-item fancybox fancybox.iframe" href="{{ article.metafields["global"]["golden-hour-youtube"] }}">
+            <img src="{{ article.image.src | img_url: 'master' }}">
+          </a>
+          {% else %}
+          <img src="{{ article.image.src | img_url: 'master' }}">
+          {% endif %}
+
+          <div class="detail">
+            <p class='episode'>Ep.{{ forloop.rindex }}</p>
+
+            {% if article.metafields.global.golden-hour-youtube %}
+            <h3>
+              <a class='golden-hour-item fancybox fancybox.iframe' href="{{ article.metafields["global"]["golden-hour-youtube"] }}">{{ article.title }}</a>
+            </h3>
+            {% else %}
+            <h3>
+              <a class='golden-hour-item not-ready' href="{{ article.metafields["global"]["golden-hour-youtube"] }}">{{ article.title }}</a>
+            </h3>
+            {% endif %}
+
+
+            <p class='text'>{{ article.content | strip_html | strip_newlines | truncatewords: 40 }}</p>
+
+            {% if article.metafields.global.golden-hour-youtube %}
+            <a class="golden-hour-item link fancybox fancybox.iframe" href="{{ article.metafields["global"]["golden-hour-youtube"] }}">Watch Now</a>
+            {% else %}
+            <a class="link" href="{{ article.metafields["global"]["golden-hour-itunes-link"] }}" target="_blank">Listen Now</a>
+            {% endif %}
+
+            <ul class='podcast-direct-link'>
+              <li class='apple-podcast'>
+                <a href="{{ article.metafields["global"]["golden-hour-itunes-link"] }}" target="_blank"><img src="{{ 'itunes-direct.png' | asset_url }}"></a>
+              </li>
+              <li class='spotify'>
+                <a href="{{ article.metafields["global"]["golden-hour-spotify-link"] }}" target="_blank"><img src="{{ 'spotify-direct.png' | asset_url }}"></a>
+              </li>
+              <li class='google-play-music'>
+                <a href="{{ article.metafields["global"]["golden-hour-googleplay-link"] }}" target="_blank"><img src="{{ 'google-play-direct.png' | asset_url }}"></a>
+              </li>
+              <!-- <li class='soundcloud'>
+                <a href="{{ article.metafields["global"]["golden-hour-soundcloud-link"] }}" target="_blank"><img src="{{ 'sound-cloud-direct.png' | asset_url }}"></a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="keep-up">
+    <h3>Keep up with Golden Hour</h3>
+    <h4>On Your Favorite Platforms</h4>
+    <ul>
+      <li><a href='https://itunes.apple.com/us/podcast/golden-hour/id1454412220?mt=2' class='apple-podcast' target="_blank"><img src="{{ 'apple-podcast.png' | asset_url }}" class='golden-hour-logo'></a></li>
+      <li><a href='https://open.spotify.com/show/3tybKZ2Z37EDmz9oaBB3DO?si=9XI1BIOQRzmv26p1rjDZ0w' class='spotify' target="_blank"><img class='small' src="{{ 'spotify-logo.png' | asset_url }}" class='golden-hour-logo'></a></li>
+      <li><a href='https://play.google.com/music/listen?u=0#/ps/Ipbtuvfbuwt7ria35kuksttepxu' class='goole-play-music' target="_blank"><img class='small' src="{{ 'google-play-badge.png' | asset_url }}" class='golden-hour-logo'></a></li>
+      <!-- <li><a href='https://soundcloud.com/polarprogoldenhour/' class='soundcloud' target="_blank"><img class='xsmall' src="{{ 'soundcloud-logo.png' | asset_url }}" class='golden-hour-logo'></a></li> -->
+    </ul>
+  </div>
+</div>
+
+<!-- <script type="text/javascript">
+$(document).ready(function() {
+    $(window).on('scroll', function() {
+        var st = $(this).scrollTop();
+
+        $('.video-banner').css({
+            'transform': 'translateY('+ (st/1) +'px)'
+        });
+    });
+});
+
+</script> -->

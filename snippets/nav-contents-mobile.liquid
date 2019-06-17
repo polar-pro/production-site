@@ -1,0 +1,43 @@
+<div class="mobile-wrapper">
+  <div class="logo-wrapper {% if settings.logo_use_image %}logo-wrapper--image{% endif %}">
+    {% if template == 'index' %}
+      <h1 class="h4 header-logo" itemscope itemtype="http://schema.org/Organization">
+    {% else %}
+      <div class="h4 header-logo" itemscope itemtype="http://schema.org/Organization">
+    {% endif %}
+        <a href="/" itemprop="url">
+          <img src="{{ 'polarpro_main_logo.png' | asset_url }}" alt="{{ shop.name }}" class="img-responsive"/>
+          <!-- <img class="img-responsive" src="{{ 'img-svg-polarpro-logo.svg' | asset_url }}" alt="{{ shop.name }}" /> -->
+        </a>
+    {% if template == 'index' %}
+      </h1>
+    {% else %}
+      </div>
+    {% endif %}
+  </div>
+  <a href class="menuToggle header-hamburger"></a>
+</div>
+<div class="header-menu nav-wrapper">
+  {% comment %}
+    List out your main-menu linklist (default)
+
+    More info on linklists:
+      - http://docs.shopify.com/themes/liquid-variables/linklists
+  {% endcomment %}
+  <ul class="main-menu accessibleNav">
+
+    {% assign main_menu_linklist = 'mobile-menu-2-0' %}
+
+    {% for link in linklists[main_menu_linklist].links %}
+      {% include 'nav-item-mobile' %}
+    {% endfor %}
+    {% comment %}
+    <li class="cart-text-link">
+      <a href="/cart" class="CartToggle">
+        {{ 'layout.cart.title' | t }}
+        <span class="cartCost {% if cart.item_count < 1 %} hidden-count {% endif %}">(<span class="money">{{ cart.total_price | money }}</span>)</span>
+      </a>
+    </li>
+    {% endcomment %}
+  </ul>
+</div>

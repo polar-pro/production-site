@@ -1,0 +1,40 @@
+
+<!-- /templates/page.liquid -->
+<div class="focus">
+  <div class="focus-header">
+    <video autoplay loop id="video-background" muted plays-inline preload="none" src="{{ 'Focus-header-video-loop.mp4' | asset_url }}">
+
+    </video>
+    <div class="wrapper text-container">
+      <img class='focus-logo' src="{{ 'focus-main-logo-grey.png' | asset_url }}">
+      <p class='blurp'>PolarPro’s original 12-part documentary series follows renowned content creators around the globe as they journey to pursue the perfect image. Told from the eye of the storyteller, follow these extraordinary artists as they travel the world, uniting exploration, photography and nature.</p>
+    </div>
+  </div>
+  <div class="focus-container">
+    <div class="wrapper">
+      <h3 class='episodes-header'>Episodes</h3>
+      <div class="grid grid-uniform">
+        {% for article in blogs.focus.articles reversed%}
+        {% if article.tags contains 'Focus' %}
+        <div class="grid__item large--one-third medium--one-half">
+          <div class="focus-item-container {{ article.title | camelcase }}">
+            <!-- <a class="image golden-hour-item fancybox fancybox.iframe" href="{{ article.metafields["global"]["focus-main-video"] }}"> -->
+            <a href="{{ article.url }}" class='article-image'>
+              <img src="{{ article.image.src | img_url: 'master' }}">
+            </a>
+            <div class="detail">
+              <p class='episode'>Ep. <span>{{ article.metafields["global"]["focus-episode-number"] }}</span></p>
+              <h3><a class='article-title' href="{{ article.url }}">{{ article.title }}</a></h3>
+              <p class='article-blurp'>{{ article.excerpt_or_content | strip_html | truncatewords: 140, '' | escape }}</p>
+              <!-- <p class='focus-by'>By {{ article.metafields["global"]["focus-by"] }}</p> -->
+              <!-- <a class="polarpro-btn watch-focus-btn {{ article.title | camelcase }}" href="#" style='pointer-events: none;'>Coming Soon</a> -->
+              <a class="polarpro-btn" href="{{ article.url }}">Discover More</a>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

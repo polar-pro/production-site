@@ -1,0 +1,348 @@
+<!-- use for slider -->
+<!-- <div class="polarpro-slider-container">
+	<div id="polarpro-slider" class="owl-carousel">
+	   <div class="item">
+			<div class="pp-slider-layered">
+				<a href="/collections/blackfriday-cybermonday"><img src="{{ '1920x600_Holiday_2017_4.jpg' | asset_url }}" /></a>
+			</div>
+		</div>
+	</div>
+</div> -->
+<style>
+.template-index .top-header-wrapper {
+	display: none;
+}
+ .template-index #fullpage .top-header-wrapper {
+	display: block;
+}
+
+
+</style>
+
+<div id="fullpage">
+	<div class="section">
+		{% include 'header-element' %}
+		<div class="polarpro-banner-container">
+			<h2>Cinema Series</h2>
+			<p>Production Grade Filters</p>
+			<div>
+				<div class="grid-uniform">
+					<div class="grid__item large--one-third medium--one-whole small--one-whole">
+						<a href='/collections/dji-mavic-filters-and-accessories/products/dji-mavic-cinema-series-filters-6-pack'>
+							<img src="{{ 'banner_CS_ND8PL_Glamour.png' | asset_url }}" class='tiny'>
+							<span>Shop Now</span>
+							<div class='name'>Mavic</div>
+						</a>
+					</div>
+					<div class="grid__item large--one-third medium--one-whole small--one-whole">
+						<a href='/products/hero6-hero5black-cinema-series-filters'>
+							<img src="{{ 'banner_CS_Hero6_Glamour.png' | asset_url }}">
+							<span>Shop Now</span>
+							<div class='name'>Hero6</div>
+						</a>
+					</div>
+					<div class="grid__item large--one-third medium--one-whole small--one-whole">
+						<a href='/products/dji-phantom-4-pro-cinema-series-6-pack'>
+							<img src="{{ 'banner_P4PRO_Vivid_Glamour.png' | asset_url }}" class='tiny'>
+							<span>Shop Now</span>
+							<div class='name'>Phantom 4 Pro/Adv</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="shop-by-aircraft wrapper">
+			<h2>Shop By Device</h2>
+				<div class="grid-uniform">
+					{% for link in linklists.shop-by-aircraft-home.links %}
+						<div class="grid__item large--one-quarter">
+						<a class='{{ link.title | handleize }}' href="{{ link.url }}">{{ link.title }}</a>
+						</div>
+						{% endfor %}
+				</div>
+		</div>
+	</div><!--section end-->
+
+	<div class="section fp-noscroll section-banner crystal-sky">
+		<div class="wrapper-full">
+			<div class="details">
+				<h3>CrystalSky Collection</h3>
+				<p>Mounts and travel solutions</p>
+				<a href="#">Shop Now</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="section fp-noscroll section-banner elektra">
+		<div class="wrapper-full">
+			<div class="details">
+				<h3>Elektra LUTS</h3>
+				<p>Quickly match footage from various<br /> camera color profiles</p>
+				<a href="#">Explore</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="section fp-noscroll section-banner fifty-fifty">
+		<div class="wrapper-full">
+			<div class="details">
+				<h3>Fifty-Fifty</h3>
+				<p>Over-under dome for GoPro<br />Hero 5/6 cameras</p>
+				<a href="#">Shop Now</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="section">
+		<div class="polar-pro-home-top">
+			<div class="hpb-container">
+				<!-- <a href="https://player.vimeo.com/video/243168082?transparent=0" class='we-are-polarpro fancybox.iframe'><img src="{{ 'We_Are_PolarPro_Banner.jpg' | asset_url }}"></a> -->
+				<div id='we-are-polar-pro-banner'>
+					<h2>Designed By Adventure, For Adventure</h2>
+		            <a href="https://player.vimeo.com/video/243168082?transparent=0&autoplay=1" class='we-are-polarpro fancybox.iframe'><i class="fa fa-play-circle" aria-hidden="true"></i></a>
+					<p>We are a group of adventure seeking videographers and photographers, <br />ever searching for creative solutions to help capture perfection.</p>
+
+				</div>
+			</div>
+		</div>
+		{% if settings.home_section_1 != blank %}
+		  {% include settings.home_section_1 %}
+		{% endif %}
+
+		{% if settings.home_section_2 != blank and settings.home_section_2 != settings.home_section_1 %}
+		  {% include settings.home_section_2 %}
+		{% endif %}
+
+		{% if settings.home_section_3 != blank and settings.home_section_3 != settings.home_section_2 and settings.home_section_3 != settings.home_section_1 %}
+		  {% include settings.home_section_3 %}
+		{% endif %}
+
+		{% if settings.home_section_4 != blank and settings.home_section_4 != settings.home_section_3 and settings.home_section_4 != settings.home_section_2 and settings.home_section_4 != settings.home_section_1 %}
+		  {% include settings.home_section_4 %}
+		{% endif %}
+
+		{% if settings.home_section_5 != blank and settings.home_section_5 != settings.home_section_4 and settings.home_section_5 != settings.home_section_3 and settings.home_section_5 != settings.home_section_2 and settings.home_section_5 != settings.home_section_1 %}
+		  {% include settings.home_section_5 %}
+		{% endif %}
+
+		<div class="wrapper polar-pro-home-bot">
+			<div class="grid-uniform">
+				<div class="grid__item large--one-third home-page-bot-item">
+					<div class="hpb-container">
+						<div class="overlay">
+							<a href="https://www.polarprofilters.com/collections/cinema-series-filters" class="name_wrapper"><span class="overlay-cta">Shop Now</span></a>
+						</div>
+						<img src="{{ 'Cinema_Series_Filters_Block_12.16.jpg' | asset_url }}">
+					</div>
+				</div>
+				<div class="grid__item large--one-third home-page-bot-item">
+					<div class="hpb-container">
+						<div class="overlay">
+							<a href="https://www.polarprofilters.com/collections/gopro_hero6_accessories" class="name_wrapper"><span class="overlay-cta">Shop Now</span></a>
+						</div>
+						<img src="{{ 'Hero6_Accessories_Block.jpg' | asset_url }}">
+					</div>
+				</div>
+				<div class="grid__item large--one-third home-page-bot-item">
+					<div class="hpb-container">
+						<div class="overlay">
+							<a href="https://www.polarprofilters.com/blogs/ventures/venture-12-ghost-of-the-arctic" class="name_wrapper"><span class="overlay-cta">Read More</span></a>
+						</div>
+						<img src="{{ 'Venture_Blog_12_Block.jpg' | asset_url }}">
+					</div>
+				</div>
+				<div class="grid__item medium--one-whole large--one-whole home-page-bot-item">
+					<div class="hpb-container">
+						<div class="overlay">
+							<a href="http://www.polarprofilters.com/collections/elektra-cinematic-color-presets" class="name_wrapper"><span class="overlay-cta">Shop Now</span></a>
+						</div>
+						<img src="{{ 'Elektra_Homepage_Hero_Banner.jpg' | asset_url }}">
+					</div>
+				</div>
+			</div>
+		</div>
+		{% include 'footer' %}
+	</div><!--end section-->
+</div><!--end fullpage-->
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+
+	$('#fullpage').fullpage({
+		//Scrolling
+		css3: true,
+		scrollingSpeed: 700,
+		autoScrolling: true,
+		fitToSection: false,
+		fitToSectionDelay: 1000,
+		scrollBar: false,
+		easing: 'easeInOutCubic',
+		easingcss3: 'ease',
+		loopBottom: false,
+		loopTop: false,
+		loopHorizontal: true,
+		continuousVertical: false,
+		continuousHorizontal: false,
+		scrollHorizontally: false,
+		interlockedSlides: false,
+		dragAndMove: false,
+		offsetSections: true,
+		resetSliders: true,
+		fadingEffect: false,
+		scrollOverflow: true,
+		scrollOverflowReset: true,
+		scrollOverflowOptions: null,
+		touchSensitivity: 15,
+		normalScrollElementTouchThreshold: 5,
+		bigSectionsDestination: top,
+
+		//Accessibility
+		keyboardScrolling: true,
+		animateAnchor: true,
+		recordHistory: true,
+
+		//Design
+		controlArrows: true,
+		verticalCentered: false,
+		paddingTop: '0px',
+		paddingBottom: '0px',
+
+		lazyLoading: true,
+	});
+
+	//toggle disable the full js using the browser width
+	// $(window).resize(function() {
+	// 	if ($(window).width() < 960) {
+	// 		$.fn.fullpage.setResponsive(false);
+	// 	}
+	// 	else {
+	// 		$.fn.fullpage.setResponsive(true);
+	// 	}
+ 	// });
+
+
+	//polarpro slider
+	var owl = $('#polarpro-slider');
+
+	owl.owlCarousel({
+		 items: 1,
+		 loop: false,
+		 nav: false,
+		 dots: false,
+         autoplay: false,
+         autoplayTimeout: 8500
+	});
+
+	$('#polar-slider-next').click(function() {
+		owl.trigger('next.owl.carousel');
+		return false;
+	});
+
+	$('#polar-slider-prev').click(function() {
+		owl.trigger('prev.owl.carousel');
+		return false;
+	});
+
+  $( ".accordion" ).accordion({
+  heightStyle: "content",
+    collapsible: true,
+    active: false
+	});
+
+	$( ".accordion>h3" ).click(function(){
+		$( ".accordion>h3 i" ).removeClass('fa-chevron-circle-up').addClass('fa-chevron-circle-down');
+		if($(this).hasClass('ui-state-active')){
+			$(this).find('i').removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');
+		}
+	});
+
+
+	//we are polar pro video pop up
+	/* Apply fancybox to multiple items */
+	$(".we-are-polarpro").fancybox({
+		// padding: 0,
+    // 	type: 'iframe',
+    // 	scrolling: 'no',
+		// width: 1400,
+		// autoHeight: true,
+		// autoWidth: true,
+		// autoSize : true
+	});
+
+	$('.we-are-polarpro').fancybox({
+	  afterLoad : function( instance, current ) {
+
+	     // Remove scrollbars and change background
+	    current.$content.css({
+				overflow   : 'visible',
+	      background : '#000'
+			});
+
+	  },
+	  onUpdate : function( instance, current ) {
+	    var width,
+	        height,
+	        ratio = 21 / 9,
+	        video = current.$content;
+
+	    if ( video ) {
+	      video.hide();
+
+	      width  = current.$slide.width() - 100;
+	      height = current.$slide.height();
+
+	      if ( height * ratio > width ) {
+	        height = width / ratio;
+	      } else {
+	        width = height * ratio;
+	      }
+
+	      video.css({
+	        width  : width,
+	        height : height
+	      }).show();
+	    }
+	  }
+	})
+
+});
+</script>
+
+
+<!-- <div class="shop-bby-device wrapper">
+	<h2>Shop By Device</h2>
+	<div id="sbd-home" class="accordion">
+		<h3>Drone <i class="fa fa-chevron-circle-down"></i></h3>
+		<div class="accordion-inner">
+			<ul class="accordion-list">
+				{% for link in linklists.drone.links %}
+				<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<h3>GoPro <i class="fa fa-chevron-circle-down"></i></h3>
+		<div>
+          <div class="accordion-inner">
+			<ul class="accordion-list">
+				{% for link in linklists.gopro.links %}
+				<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% endfor %}
+			</ul>
+		  </div>
+      	</div>
+		<h3>Mobile <i class="fa fa-chevron-circle-down"></i></h3>
+		<div>
+      		<ul class="accordion-list">
+				{% for link in linklists.mobile.links %}
+				<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% endfor %}
+			</ul>
+      	</div>
+	</div>
+</div> -->
+
+
+<!-- <div id="tout1_hm_4Tell" ></div> -->

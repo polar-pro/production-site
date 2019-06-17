@@ -1,0 +1,12 @@
+<!-- /templates/page.liquid -->
+
+<div class="shop-by-device wrapper">
+	<h2>Shop By Device</h2>
+  	<div class="grid-uniform">
+    	{% for link in linklists.shop-by-device-all.links %}
+      	<div class="grid__item large--one-quarter">
+    		<a class='{{ link.title | handleize }}' href="{{ link.url }}" title="{{ link.title | handleize }}">{{ link.title }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

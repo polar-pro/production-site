@@ -1,0 +1,249 @@
+<!-- <div class="header-menu nav-wrapper">
+  <ul class="main-menu accessibleNav">
+    {% if settings.main_menu_linklist %}
+      {% assign main_menu_linklist = settings.main_menu_linklist %}
+    {% else %}
+      {% assign main_menu_linklist = 'top-menu-3-0' %}
+    {% endif %}
+    {% for link in linklists[main_menu_linklist].links %}
+      {% include 'nav-item' %}
+    {% endfor %}
+  </ul>
+</div> -->
+
+
+<!-- <style media="screen">
+  #menu ul, li, a{
+    font-size: 12px;
+    color: #fff;
+  }
+  .polarpro-top-header .pp-desktop-nav ul li {
+    display: block;
+    color: #000;
+  }
+</style> -->
+
+<nav id="menu" style='display: none;'>
+  <ul>
+    <li class="SubmenuTabs IconHidden">
+      <a href="#" class='no-linking-active'>Shop</a>
+      <ul>
+        <li class="SubmenuMega by-device">
+          <a href="#">By Device</a>
+          <ul class='by-device-container'>
+            <li>
+              <a href="#" class='no-linking'>Drone</a>
+              <ul>
+                <li><a href="/collections/mavic-2-filters-accessories">DJI Mavic 2</a></li>
+                <li><a href="/collections/dji-phantom-4-pro">DJI Phantom 4 Pro</a></li>
+                <li><a href="/collections/dji-mavic-air-filters-and-accessories">DJI Mavic Air</a></li>
+                <li><a href="/collections/dji-mavic-filters-and-accessories">DJI Mavic Pro/Platinum</a></li>
+                <li><a href="/collections/inspire-2">DJI Inspire 2</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class='no-linking'>Camera</a>
+              <ul>
+                <li><a href="/collections/camera">Mirrorless Cameras</a></li>
+                <li><a href="/collections/camera">DSLR Cameras</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class='no-linking'>Osmo</a>
+              <ul>
+                <li><a href="/collections/osmo-action-accessories-action-filters">Osmo Action</a></li>
+                <li><a href="/collections/osmo-pocket-collection">Osmo Pocket</a></li>
+              </ul>
+            </li>
+            <br>
+            <li>
+              <a href="/collections/gopro">GoPro</a>
+              <ul>
+                <li><a href="/collections/gopro-7">Hero7</a></li>
+                <li><a href="/collections/gopro-6">Hero6</a></li>
+                <li><a href="/collections/gopro-5">Hero5</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class='no-linking'>Mobile</a>
+              <ul>
+                <li><a href="/collections/mobile-collection/mobile-iris-filter">IPhone XS Max</a></li>
+                <li><a href="/collections/mobile-collection/mobile-iris-filter">IPhone XS</a></li>
+                <li><a href="/collections/mobile-collection/mobile-iris-filter">IPhone X</a></li>
+                <li><a href="/collections/mobile-collection/mobile-iris-filter">IPhone 7/8</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class='no-linking'>Gimbals</a>
+              <ul>
+                <li><a href="/products/dji-ronin-s-monitor-mount">DJI Ronin S</a></li>
+                <li><a href="/products/counterweight-ziyhun-smooth-4">Ziyhun Smooth 4</a></li>
+              </ul>
+            </li>
+
+
+          </ul>
+        </li>
+        <li class="SubmenuMega by-product">
+          <a href="#">By Product</a>
+          <ul>
+            <div class='feature-links'>
+              <a href="#" class='no-linking'>New Products</a>
+              <li><a href="/products/variable-nd-mckinnon">Variable ND Filters</a></li>
+              <li><a href="/collections/osmo-action-accessories-action-filters/osmo-action-filters">Osmo Action Filters</a></li>
+              <li><a href="/collections/dive-filters">HERO7 Black Dive Filters</a></li>
+              <li><a href="/products/defender-lens-cover">Defender Lens Cover</a></li>
+            </div>
+            <li>
+              <a href="#" class='no-linking'>Camera Gear</a>
+              <ul>
+                <li><a href="/products/variable-nd-mckinnon">Variable ND Filters</a></li>
+                <li><a href="/products/quartzline-filters?variant=12201310027860">ND | ND/PL Filters</a></li>
+                <li><a href="/products/quartzline-filters?variant=12201309995092">CP Filters</a></li>
+                <li><a href="/products/defender-lens-cover">Lens Covers</a></li>
+                <li><a href="/products/sd-card-case">Memory Card Cases</a></li>
+                <li><a href="/products/step-up-rings">Step-Up Rings</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class='no-linking'>Aerial Gear</a>
+              <ul>
+                <li><a href="/collections/drone-filters">ND | ND/PL Filters</a></li>
+                <li><a href="/collections/mavic-tablet-mounts">Monitor Mounts</a></li>
+                <li><a href="/collections/camera-rigs-trays">Handheld Rigs</a></li>
+                <li><a href="/collections/gimbal-locks">Gimbal Locks</a></li>
+                <li><a href="/collections/camera_travel_cases">Travel Cases</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class='no-linking'>Osmo Action Gear</a>
+              <ul>
+                <li><a href="/collections/osmo-action-accessories-action-filters/osmo-action-filters">ND | ND/PL Filters</a></li>
+                <li><a href="/collections/osmo-action-accessories-action-filters/osmo-action-mounts">Camera Mounts</a></li>
+                <!-- <li><a href="/collections/osmo-action-accessories-action-filters/osmo-action-cases">Travel Cases</a></li> -->
+              </ul>
+            </li>
+            <br>
+            <li>
+              <a href="#" class='no-linking'>Osmo Pocket Gear</a>
+              <ul>
+                <li><a href="/collections/osmo-pocket-collection/osmo-pocket-filters">ND | ND/PL Filters</a></li>
+                <li><a href="/collections/osmo-pocket-collection/osmo-pocket-mounts">Camera Mounts</a></li>
+                <li><a href="/collections/osmo-pocket-collection/osmo-pocket-cases">Travel Cases</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class='no-linking'>GoPro Gear</a>
+              <ul>
+                <li><a href="/collections/dive-filters">Dive Filters</a></li>
+                <li><a href="/collections/gopro/products/hero7-hero6-hero5-black-shutter-collection">ND Filters</a></li>
+                <li><a href="/collections/gopro/products/goprodome">FiftyFifty Dome</a></li>
+                <li><a href="/collections/gopro-mounts">Camera Mounts</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class='no-linking'>More Gear</a>
+              <ul>
+                <li><a href="/products/dji-ronin-s-monitor-mount">Ronin S Monitor Mount</a></li>
+                <li><a href="/collections/mobile-collection/mobile-iris-filter">iPhone ND Filters</a></li>
+                <li><a href="/collections/camera_monitor_covers">Monitor Covers</a></li>
+                <li><a href="/collections/merch">Merch</a></li>
+
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+
+        <!-- <li class="SubmenuMega">
+          <a href="#">By Filter Type</a>
+          <ul>
+            <li>
+              <a href="#">Camera</a>
+              <ul>
+                <li><a href="#">Video Filters</a></li>
+                <li><a href="#">Photo Filters</a></li>
+                <li><a href="#">Long Exposure Filters</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Drone</a>
+              <ul>
+                <li><a href="#">Video Filters</a></li>
+                <li><a href="#">Photo Filters</a></li>
+                <li><a href="#">Long Exposure Filters</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Osmo Pocket</a>
+              <ul>
+                <li><a href="#">Video/Photo Filters</a></li>
+              </ul>
+            </li>
+            <br>
+            <li>
+              <a href="#">GoPro</a>
+              <ul>
+                <li><a href="#">Under water Filters</a></li>
+                <li><a href="#">Above water Filters</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li> -->
+      </ul>
+    </li>
+    <li class="IconHidden SubmenuMega">
+      <a href="/pages/custom-shop">Custom Shop</a>
+      <ul class='direct-dropdown menu'>
+        <li>
+          <a href="/pages/custom-shop">Shop By</a>
+          <ul>
+            <li><a href="/collections/quartzline-custom-filter-sets">QuartzLine</a></li>
+            <li><a href="/collections/mavic-2-custom-filter-sets">Mavic 2</a></li>
+            <li><a href="/collections/osmo-action-custom-filter-sets">Osmo Action</a></li>
+            <li><a href="/products/single-filter-cinema-series-osmo-pocket">Osmo Pocket</a></li>
+            <li><a href="/collections/mavic-air-custom-shop">Mavic Air</a></li>
+            <li><a href="/collections/mavic-pro-platinum-custom-shop">Mavic Pro/Platinum</a></li>
+            <li><a href="/collections/phantom-4-pro-adv-custom-filter-sets">Phantom 4 Pro/Adv</a></li>
+            <li><a href="/collections/inspire-2-custom-shop">Inspire 2</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="IconHidden SubmenuMega">
+      <a href="#" class='no-linking-active'>Explore</a>
+      <ul class='direct-dropdown menu'>
+        <li>
+          <a href="#" class='no-linking'>Inspiration</a>
+          <ul>
+            <li><a href="/pages/team-polarpro">Pro Team</a></li>
+            <li><a href="/pages/focus" class=''>Focus Series</a></li>
+            <li><a href="/pages/golden-hour-podcast" class=''>Golden Hour Podcast</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class='no-linking'>About Us</a>
+          <ul>
+            <li><a href="/pages/meet-the-team">Who We Are</a></li>
+            <li><a href="/collections/merch">Merch</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li class="IconHidden SubmenuMega">
+      <a href="/pages/support">Support</a>
+      <ul class='direct-dropdown menu'>
+        <li>
+          <a href="/pages/support" class=''>Customer Support</a>
+          <ul>
+            <li><a href="/pages/track-your-order">Track Order</a></li>
+            <li><a href="/a/returns">Returns</a></li>
+            <li><a href="/pages/shipping">Shipping</a></li>
+            <!-- <li><a href="#" onclick="zE.activate({hideOnClose: true});">Contact Us</a></li> -->
+            <li><a href="/pages/contact-us">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>

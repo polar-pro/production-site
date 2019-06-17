@@ -1,0 +1,273 @@
+
+<!-- /templates/page.liquid -->
+<div class="wrapper">
+  <!-- service notice link -->
+  <!-- <div id="myBtn" class='errors'>Service Notice</div> -->
+</div>
+<div class="wrapper page-margin">
+  <div class="grid">
+    <div class="grid__item">
+      {% comment %}<h2 class="title text-center">{{ page.title }}</h2>{% endcomment %}
+      {% comment %}
+        Regular page content goes here.
+      {% endcomment %}
+
+
+      <div class='support-container'>
+        <div id="tabs" style='display: none;'>
+          <ul class='clear-fix'>
+            <li><a href="#tabs-1" id='my-order-link'>My Order</a></li>
+            <li><a href="#tabs-2" id='contact-link'>Contact Us</a></li>
+            <li><a href="#tabs-3" id='returns-link'>Returns</a></li>
+            <li><a href="#tabs-4" id='support-link'>Product Support</a></li>
+            <li><a href="#tabs-5" id='shipping-link'>Shipping</a></li>
+            <li><a href="#tabs-6" id='warranty-link'>Warranty</a></li>
+            <li class='link-to'><a href="/tools/faq" id='faq-link'>FAQ</a></li>
+          </ul>
+
+
+          <div id="tabs-1">
+            <!-- <link rel="stylesheet" href="//www.theshoppad.com/apps/tracktor/assets/client/css/style.css"> -->
+            <div id="tracktor" class="themeLight" data-theme="Light" data-progress-bar-color="#037E8C">
+              <div id="tracktorContainer" style="max-width:450px; margin: 0 auto;">
+                <form id="tracktorOrderForm" method="GET" action="/apps/tracktor">
+                  <h1>Track Your Order</h1>
+                    <div>
+                      <label for="tracktorOrderName">Order Number</label>
+                      <input id="tracktorOrderName" type="text" name="order">
+                    </div>
+                    <div>
+                      <label for="tracktorOrderEmail">Email</label>
+                      <input id="tracktorOrderEmail" type="text" name="email">
+                    </div>
+                  <button id="tracktorTrack" class="button-enter btn styled-submit">Track</button>
+                </form>
+                <p style="font-family: 'AvenirNextLTPro-Regular'; font-size: 11px;">*Please enter your full 10-digit order number, including the prefix.  <br />Example: 2299900000</p>
+              </div>
+            </div>
+          </div>
+          <div id="tabs-2">
+            <center>
+              <h2 class="title text-center pp-page-title">Contact Us</h2>
+            </center>
+            <div style="margin:0 auto;" id="zbwid-6339d983"></div>
+          </div>
+          <div id="tabs-3">
+            <center>
+            <h2 class="title text-center pp-page-title">Returns</h2>
+            <br /><br />
+            <p class="p2" style="text-align: left;"><span class="s1" style="color: #54585a;">In addition to the Limited Lifetime Warranty, purchases made on PolarPro’s online store include a 60-Day Satisfaction Guarantee; if you aren’t happy with your product you can return it within 60 days from the date of purchase for your money back.  Need to set up a return?</span></p>
+            <span style="color: #54585a;"> <a class="contact-btn link2">Contact Us</a> </span>
+            <p class="p4" style="text-align: left;"><span style="color: #54585a;"> </span></p>
+            <h4 class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;">Terms</span></h4>
+            <ul style="text-align: center; margin-bottom: 0;">
+            <li style="text-align: center; color: #54585a;">All returns should include a dated proof of purchase with description of product sold.  Items bought from unauthorized resellers will not be covered under warranty.</li>
+            <li style="text-align: center; color: #54585a;">Products returned within 60 days will receive a full refund or replacement.*</li>
+            <li style="text-align: center; color: #54585a;">Products returned after 60 days will receive store credit or replacement.</li>
+            <li style="text-align: center; color: #54585a;">Discontinued products can be returned for a product that supersedes the discontinued model or for store credit.</li>
+            <li style="text-align: center; color: #54585a;">All refunds will be processed back to the original payment method.</li>
+            </ul>
+            <p class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;">*Refunds can only be applied to PolarPro online store purchases.</span></p>
+            <h4 class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;">International Returns</span></h4>
+            <p class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;">If returning a product internationally, it is up to the sender to pay the associated shipping costs.  In the event that a product is defective, please reach out to our support team for additional return instructions so that we may receive the warranty shipment properly.  </span></p>
+            <p class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;">Refunds or replacements will be issued upon receipt of the returned product(s).</span></p>
+            <p class="p5" style="text-align: center;"><span style="color: #54585a;"> If a product was originally purchased from a local store, we are happy to work with that store to arrange a return or replacement.  Please let our support team know if this is the case.</span></p>
+            <h4 class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;">Note</span></h4>
+            <p class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;">Customs fees are considered a normal part of international shipments and are determined locally at the time of import.  PolarPro is unable to provide reimbursements for customs fees on any shipment.</span></p>
+            <p class="p2" style="text-align: center;"> </p>
+            <p class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;"><i>For further questions about PolarPro’s Return Policy or to make a claim, please email our support team at </i><a href="mailto:support@polarprofilters.com" style="color: #54585a;"><span class="s2"><i>support@polarpro.com</i></span></a><i>, or give us a call during the week, at 949.220.9395, 9am-5pm PST.</i></span></p>
+            </center>
+            <!-- Start of polarpro Zendesk Widget script --><script>// <![CDATA[
+            window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","polarpro.zendesk.com");
+            // ]]></script><!-- End of polarpro Zendesk Widget script -->
+          </div>
+
+          <div id="tabs-4">
+            <center>
+              <h2 class="title text-center pp-page-title">Product Support</h2>
+            </center>
+
+            <!-- support categories listing -->
+            <div class="support-by-products wrapper">
+              <div class="grid-uniform">
+                {% for link in linklists.support-by-products-all.links %}
+                  <div class="grid__item large--one-quarter">
+                      <a class='{{ link.title | handleize }}' href="{{ link.url }}" title="{{ link.title | handleize }}">{{ link.title }}</a>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div id="tabs-5">
+            <center>
+              <h2 class="title text-center pp-page-title">Shipping</h2>
+            </center>
+            <br /><br />
+            <p style="text-align: center;"><span style="color: #666666;">We strive to get all of our orders shipped out the <strong>same business day</strong> when your order is placed before 12:00pm PST.</span><br /><span style="color: #666666;">All orders placed after will be shipped out first thing the following business day.</span></p>
+            <h4 style="text-align: center; font-size: 22px; font-weight: bold;"><span style="color: #666666;">USA</span></h4>
+            <meta charset="utf-8" />
+            <p style="text-align: center;"><span style="color: #666666;"><span>USPS Standard (3-5 business days) - Free</span></span></p>
+            <meta charset="utf-8" />
+            <p style="text-align: center;"><span style="color: #666666;"><span>USPS Priority (2-3 business days) - $6.00+</span></span></p>
+            <meta charset="utf-8" />
+            <p style="text-align: center;"><span style="color: #666666;"><span>FedEx 2-Day* (2 business days) - pricing quote provided at checkout</span></span></p>
+            <p style="text-align: center;"><span style="color: #666666;"><span>FedEx Standard Overnight* (delivery by end of next day) - pricing quote provided at checkout</span></span></p>
+            <p style="text-align: center;"><span style="color: #666666;"><span>FedEx Priority Overnight* (early next day delivery) - pricing quote provided at checkout</span></span></p>
+
+            <p style="text-align: center;"><span style="color: #666666; font-weight: bold;"><span>*Please note weekends may affect shipping times/rates for these methods.</span></span></p>
+            <p style="text-align: center;"> </p>
+
+            <h4 style="text-align: center; font-size: 22px; font-weight: bold;"><span style="color: #666666;">Canada</span></h4>
+            <meta charset="utf-8" />
+            <p style="text-align: center;"><span style="color: #666666;">USPS International (14-21 business days) - $12.99+</span></p>
+            <p style="text-align: center;"><span style="color: #666666;">DHL Express (3-4 business days) - $34.99</span></p>
+            <p style="text-align: center;"> </p>
+            <meta charset="utf-8" />
+            <h4 style="text-align: center; font-size: 22px; font-weight: bold;"><span style="color: #666666;">Australia</span><span style="color: #666666;"> </span></h4>
+            <meta charset="utf-8" />
+            <p style="text-align: center;"><span style="color: #666666;"><span>USPS International (14 to 21 days) - $14.99+</span></span></p>
+            <meta charset="utf-8" />
+            <p style="text-align: center;"><span style="color: #666666;"><span>DHL Shipping (4 to 5 days) - $44.99+</span></span></p>
+            <p style="text-align: center;"><span style="color: #666666;">       </span></p>
+            <meta charset="utf-8" />
+            <h4 style="text-align: center; font-size: 22px; font-weight: bold;"><span style="color: #666666;">UK / Germany / France<br /></span></h4>
+            <meta charset="utf-8" />
+            <p style="text-align: center;"><span style="color: #666666;"><span>USPS International (14 to 21 days) - $14.99+</span></span></p>
+            <meta charset="utf-8" />
+            <p style="text-align: center;"><span style="color: #666666;"><span>DHL Shipping (4 to 5 days) - $44.99+</span></span></p>
+            <p style="text-align: center;"> </p>
+            <h4 style="text-align: center; font-size: 22px; font-weight: bold;"><span style="color: #666666;">All Other Countries<br /></span></h4>
+            <meta charset="utf-8" />
+            <p style="text-align: center;"><span style="color: #666666;"><span>USPS International (21 to 30 days) - $14.99+</span></span></p>
+            <meta charset="utf-8" />
+            <p style="text-align: center;"><span style="color: #666666;"><span>DHL Shipping (4 to 5 days) - $44.99+</span></span></p>
+            <br />
+            <h3 style="text-align: center;"><span style="color: #666666;">International Shipping Notes:</span></h3>
+            <p style="text-align: center;"><span style="color: #666666;"><strong>*International shipping times can vary based on customs processing. DHL rates are guaranteed to arrive within the time frame above.</strong></span></p>
+            <p style="text-align: center;"><span style="color: #666666;"><strong>*PolarPro does not include import duties, taxes, and charges in the final cost of any order. These charges are the buyer's responsibility. We recommend checking with your country's customs office to determine what these additional costs will be prior to ordering. If you'd prefer to buy locally, please check out our <a href="https://www.polarprofilters.com/apps/store-locator" target="_blank" rel="noopener noreferrer">store locator</a>.</strong></span></p>
+            <p style="text-align: center;"><span style="color: #666666;"> </span></p>
+
+            <!-- Start of polarpro Zendesk Widget script --><script>// <![CDATA[
+            window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","polarpro.zendesk.com");
+            // ]]></script><!-- End of polarpro Zendesk Widget script -->
+          </div>
+
+          <div id="tabs-6">
+            <center>
+              <h2 class="title text-center pp-page-title">Warranty</h2>
+            </center>
+            <br /><br />
+            <h4 style="text-align: center; color: #54585a;"><span class="s1">PolarPro Limited Lifetime Warranty </span></h4>
+            <p class="p2"><span class="s1" style="color: #54585a;">PolarPro promises that its products are free from manufacturer defects in materials or workmanship for the lifetime of the product.  Need to make a claim?</span></p>
+            <div style="text-align: center;"><a class="contact-btn link2">Submit Claim</a></div>
+            <br /><br />
+            <h4 style="text-align: center;"><span class="s1" style="color: #54585a;">Terms</span></h4>
+            <p class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;">PolarPro’s Limited Lifetime Warranty covers PolarPro products under their intended use.  This warranty does not cover the negligent use of any product, including; scratches or cracks on filter lenses from improper use or storage, or damage from mishandling or dropping the product.  </span></p>
+            <p class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;">PolarPro’s Limited Lifetime Warranty is non-transferable and is applicable to the original purchaser only.  It cannot be extended to cover second-hand purchases from unauthorized resellers.  </span></p>
+            <p class="p2" style="text-align: center;"><span class="s1" style="color: #54585a;">All warranty claims should include a dated proof of purchase with description of product sold.  Items bought from unauthorized resellers will not be covered under warranty.</span></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Trigger/Open The Modal -->
+<!-- The Modal -->
+<!-- <div id="myModal" class="modal">
+
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="header">
+      <i class="fa fa-info-circle" aria-hidden="true"></i>
+    </div>
+    <div class="content">
+      <h3>Service Notice:</h3>
+
+      <p>PolarPro Phone Support will not be available until Monday October 8th. Only online support is currently offered to expedite our response times.</p>
+
+      <p>Due to a large volume of tickets our online response times are currently from 48 to 72 hours.</p>
+      <br>
+
+      <h3>Shipping updates:</h3>
+
+      <p>Mavic 2 Custom orders – Currently being custom built – shipping will be completed by October 12th.</p>
+
+      <p>Mavic 2 Gradient orders – Production delayed due to demand – shipping will be completed on October 12th.</p>
+
+      <p>If you need to change or cancel an order just submit a ticket and we will get you taken care of.</p>
+
+      <p>We are not accepting any overnight or expedited shipping requests until October 8th .</p>
+    </div>
+
+  </div>
+
+</div> -->
+
+
+<div class="rte">
+  {{ page.content }}
+</div>
+
+
+<!-- support page js -->
+<!-- jquery specific for this page -->
+<script>
+
+
+$(document).ready(function() {
+  $("#tabs").tabs({
+    active: 3
+  });
+  $('#tabs > ul > li.link-to a').unbind('click');
+  $( "#accordion" ).accordion();
+
+  //make links to open tabs on the jquery ui
+  $('.link1').click(function() { // bind click event to link
+    $( "#tabs" ).tabs({ active: 0 });
+    return false;
+  })
+
+  $('.link2').click(function() { // bind click event to link
+    $( "#tabs" ).tabs({ active: 1 });
+    return false;
+  })
+
+  $('.link3').click(function() { // bind click event to link
+    $( "#tabs" ).tabs({ active: 2 });
+    return false;
+  })
+  $( "#tabs" ).show();
+});
+
+
+//temp workaround when using back btn to refire the jquery
+window.onpageshow = function(event) {
+  $("#tabs").tabs({
+    active: 3
+  });
+  $('#tabs > ul > li.link-to a').unbind('click');
+  $( "#accordion" ).accordion();
+
+  //make links to open tabs on the jquery ui
+  $('.link1').click(function() { // bind click event to link
+    $( "#tabs" ).tabs({ active: 0 });
+    return false;
+  })
+
+  $('.link2').click(function() { // bind click event to link
+    $( "#tabs" ).tabs({ active: 1 });
+    return false;
+  })
+
+  $('.link3').click(function() { // bind click event to link
+    $( "#tabs" ).tabs({ active: 2 });
+    return false;
+  })
+};
+
+</script>

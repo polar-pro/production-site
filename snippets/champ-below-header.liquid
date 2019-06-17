@@ -1,0 +1,43 @@
+<div class='forum-banner'>
+  <img src="{{ 'capture-perfections-banner.png' | asset_url }}" class='forum-banner-img' style='max-width: 100%; height: auto; margin-bottom: 20px;'>
+</div>
+<div class='container home-forum-only' style='display: none;'>
+  <div class='row'>
+    <div class='col-md-4'>
+      <a href='#'>
+        <img src="{{ 'banner-Venture-Blog-Section.jpg' | asset_url }}" style='max-width: 100%; height: auto; margin-bottom: 20px;'>
+      </a>
+    </div>
+    <div class='col-md-4'>
+      <a href='#'>
+        <img src="{{ 'about_banner_we_explore.jpg' | asset_url }}" style='max-width: 100%; height: auto; margin-bottom: 20px;'>
+      </a>
+    </div>
+    <div class='col-md-4'>
+      <a href='https://www.polarprofilters.com/collections/dji-mavic-air-filters-and-accessories'>
+        <img src="{{ 'banner-Mavic-Air-Collection.jpg' | asset_url }}" style='max-width: 100%; height: auto; margin-bottom: 20px;'>
+      </a>
+    </div>
+    <div class='col-md-12'>
+      <a href='https://www.polarprofilters.com/community/polarproforum/forums/103/topics/181'>
+        <img src="{{ 'about_banner_we_shoot.jpg' | asset_url }}" style='max-width: 100%; height: auto; margin-bottom: 20px;'>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+  $('.smooth-goto').on('click', function() {
+    $('html, body').animate({scrollTop: $(this.hash).offset().top - 100}, 1000);
+    return false;
+  });
+});
+var currentURL = window.location.href;
+console.log(currentURL);
+if(window.location.href === "https://www.polarprofilters.com/community/polarproforum"){
+  $(".home-forum-only").css("display", "block");
+}
+</script>

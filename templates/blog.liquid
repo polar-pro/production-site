@@ -1,0 +1,49 @@
+<!-- /templates/blog.liquid -->
+{% comment %}
+
+  Loop through a defined number of articles with the 'paginate' tag.
+  Don't forget to close the tag after your loop.
+
+{% endcomment %}
+
+{% paginate blog.articles by 40 %}
+
+{% comment %}
+  This template is also used for listing out articles of a specific tag.
+  You can change layouts or styles by checking if current_tags is true.
+{% endcomment %}
+<div class="wrapper page-margin blog-list">
+
+	<nav class="breadcrumb" role="navigation" aria-label="breadcrumbs">
+	  <a href="/pages/blog" title="support home">Back to Blog Hub</a>
+	</nav>
+
+	<div class="grid">
+		{% for article in blog.articles %}
+		<div class="grid__item large--one-third">
+			<div class="article-item">
+				<a href="{{ article.url }}">
+					<div class="pp-article-thumb"><img src="{{ article.image.src | img_url: 'master' }}"></div>
+					<div class='details'>
+						<h2 class="pp-article-title">{{ article.title }}</h2>
+						<div class='tag-item'>
+							{% for tag in article.tags %}
+					  		<span class="tag">{{ tag | link_to_tag: tag }}</span>
+								{% endfor %}
+						</div>
+						<p class="pp-article-date">{{ article.published_at | date: "%B %d %Y" }}</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		{% endfor %}
+
+		{% if paginate.pages > 1 %}
+			<div class="text-center">
+			  {% include 'pagination-custom' %}
+			</div>
+		{% endif %}
+	</div>
+</div>
+
+{% endpaginate %}

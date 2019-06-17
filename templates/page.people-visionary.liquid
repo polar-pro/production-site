@@ -1,0 +1,81 @@
+<!-- team polarpro visionary page -->
+
+<div class="">
+  <div class="team-polarpro-page">
+    <!-- <h2 class="title text-center">{{ page.title }}</h2>
+    {{ page.content }} -->
+    <div class="header" style='background: url({{ page.metafields["global"]["bg-teampp"] }}); background-size: cover; display: block; height: 50vw; max-width: 50vw;'>
+      <!-- <img src="{{ page.metafields["global"]["bg-teampp"] }}" alt="" class='header-bg'> -->
+      <img src="{{ page.metafields["global"]["profile-image-teampp"] }}" alt="" class='profile-img'>
+
+    </div>
+    <div class="visionary-text">
+      Visionaries
+    </div>
+    <div class="about">
+      <h2 class='name'>
+        {{ page.metafields["global"]["First-Name-teampp"] }}
+        <span>{{ page.metafields["global"]["Last-Name-teampp"] }}</span>
+      </h2>
+      <div class="team-polarpro-logo">
+        <img src="{{ 'Pro_Team_Mark_small.png' | asset_url }}" class='team-polarpro-icon'>
+        <p>
+          Team
+          <span>Polarpro</span>
+        </p>
+      </div>
+      <div class="social">
+        <div class="links">
+          {% if page.metafields.global.social-instagram %}
+            <a href="{{ page.metafields["global"]["social-instagram"] }}" class='fa fa-instagram'></a>
+          {% endif %}
+          {% if page.metafields.global.social-web %}
+            <a href="{{ page.metafields["global"]["social-web"] }}" class='fa fa-globe'></a>
+          {% endif %}
+        </div>
+        <div class="location">
+          {{ page.metafields["global"]["location-teampp"] }}
+        </div>
+      </div>
+      <div class='main-bio'>
+        {{ page.metafields["global"]["About-teampp"] }}
+      </div>
+    </div>
+  </div>
+
+  <div class="photos-logo">
+    <img src="{{ 'Photos_Logo.png' | asset_url }}">
+    <p class="name">{{ page.metafields["global"]["First-Name-teampp"] }} {{ page.metafields["global"]["Last-Name-teampp"] }}</p>
+    <p class='latest'>Latest Content</p>
+  </div>
+
+  <div class="photos" style='background: url({{ page.metafields["global"]["slide-bg-teampp"] }}); background-size: cover; background-position: center;'>
+
+
+    {% assign portfolio_img = page.metafields["global"]["Img-slide-teampp"] | split: "," %}
+
+    <div class="portfolio-slide">
+      {% for image in portfolio_img %}
+        <img src="{{ image }}" alt="">
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="back-to-team wrapper">
+    <a href="/pages/team-polarpro"><span><<</span>Back to Team</a>
+  </div>
+</div>
+
+
+<!-- portfolio slides -->
+<script type="text/javascript">
+
+$(document).ready(function() {
+  $('.portfolio-slide').slick({
+    dots: true,
+    adaptiveHeight: true
+  })
+});
+
+
+</script>

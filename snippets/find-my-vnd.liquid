@@ -1,0 +1,2549 @@
+<div class="find-my-defender find-gear">
+  <h5>Find My Size</h5>
+  <select name="make" id="make">
+    <option value="0">SELECT LENS:</option>
+    <option value="1">Canon (EF-Mount)</option>
+    <option value="2">Canon (EF-M-Mount)</option>
+    <option value="3">Canon (RF-Mount)</option>
+    <option value="4">Fuji G-Mount</option>
+    <option value="5">Fuji X-Series</option>
+    <option value="6">Nikon</option>
+    <option value="7">Nikon (Z-Mount)</option>
+    <option value="8">M. Zuiko Pro</option>
+    <option value="9">M. Zuiko Premium </option>
+    <option value="10">M. Zuiko</option>
+    <option value="11">Panasonic zoom</option>
+    <option value="12">Panasonic Speciality </option>
+    <option value="13">Panasonic Leica</option>
+    <option value="14">Panasonic Fixed Focal Length</option>
+    <option value="15">Pentax K-mount</option>
+    <option value="16">Pentax 645Z-mount</option>
+    <option value="17">Rokinon Auto Focus</option>
+    <option value="18">Rokinon Digital Photo</option>
+    <option value="19">Rokinon CINE DS</option>
+    <option value="20">Rokinon CINE</option>
+    <option value="21">SAMSUNG NX LENS</option>
+    <option value="21">SAMYANG Auto Focus</option>
+    <option value="21">SAMYANG Manual Focus</option>
+    <option value="21">SAMYANG Cine</option>
+    <option value="21">Sigma Wide angle Lens</option>
+    <option value="21">Sigma Standard Lens</option>
+    <option value="21">Sigma Telephoto Lens</option>
+    <option value="21">Sigma Multi-Purpose Lens</option>
+    <option value="21">Sigma Macro Lens</option>
+    <option value="21">Sony E- Mount</option>
+    <option value="21">Sony A- Mount</option>
+    <option value="21">Tamron Di</option>
+    <option value="21">Tamron Di II</option>
+  </select>
+  <select name="model" id="model">
+      <option value="model">SELECT MODEL</option>
+  </select>
+  <label for="Size">Your size:</label>
+  <div type="text" name="size" id="size"> - </div>
+
+
+  <!-- find my defender script -->
+  <script type="text/javascript">
+  var a = {
+      Cars:
+      [
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 50mm f/1.8 STM Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 40mm f/2.8 STM Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 50mm f/1.8 II Camera Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 50mm f/2.5 Compact Macro Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF-S 24mm f/2.8 STM Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 100mm f/2 USM Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 100mm f/2.8 Macro USM Fixed Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 20mm f/2.8 USM Wide-Angle Fixed Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 24mm f/2.8 IS USM Wide Angle Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 28mm f/1.8 USM Wide Angle Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 28mm f/2.8 IS USM Wide Angle Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 50mm f/1.4 USM Standard & Medium – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 70-300mm f/4.5-5.6 DO IS USM Canon EOS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 70-300mm f/4-5.6 IS USM Canon EOS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 75-300mm f/4-5.6 III Telephoto Zoom Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 75-300mm f/4-5.6 III USM Telephoto Zoom Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 85mm f/1.8 USM Medium Telephoto Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon MP-E 65mm f/2.8 1-5X Macro Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "EF 70-300mm f/4-5.6 IS II USM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 100mm f/2.8L IS USM Macro Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 180mm f3.5L Macro USM AutoFocus Telephoto Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 35mm f/2 IS USM Wide-Angle Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 70-200mm f/4 L IS USM Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 70-200mm f/4L USM Telephoto Zoom Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 70-300mm f/4-5.6L IS USM UD Telephoto Zoom Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF-S 15-85mm f/3.5-5.6 IS USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 28-200mm f/3.5-5.6 USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 200mm f/2.8L II USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "EF 28-135mm f/3.5-5.6 IS USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon Zoom Wide Angle-Telephoto EF 28-200mm f/3.5-5.6 USM Autofocus Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 50mm f/1.2L USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 85mm f/1.2L II USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 200mm f/2.8L II USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 20mm f/2.8 USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 135mm f/2L USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 180mm f/3.5L Macro USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 35mm f/1.4L II USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "EF 70–200mm f/4L IS II USM",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 100-400mm f/4.5-5.6L IS II USM Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 16-35mm f/4L IS USM Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 17-40mm f/4L USM Ultra Wide Angle Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 24-105mm f/3.5-5.6 IS STM Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 24-105mm f/4 L IS USM Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 24-105mm f/4L IS USM Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 24-70mm f/4.0L IS USM Standard Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 24mm f/1.4L II USM Wide Angle Lens – Fixed",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 28-300mm f/3.5-5.6L IS USM Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 300mm f/4L IS USM Telephoto Fixed Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 400mm f/5.6L USM Super Telephoto Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 70-200mm f/2.8L IS II USM Telephoto Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 70-200mm f/2.8L USM Telephoto Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "EF 85mm f/1.4L IS USM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "TS-E 50mm f/2.8L MacroTS-E 90mm f/2.8L Macro",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "TS-E 90mm f/2.8L Macro",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "EF 70-200mm f/2.8L IS III USM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 16-35mm f/2.8L II USM Ultra Wide Angle Zoom Lens",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "Canon EF 24-70mm f/2.8L II USM Standard Zoom Lens",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "TS-E 24mm f/3.5L II",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Canon (EF-Mount)",
+          "model": "TS-E 135mm f/4L Macro",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "Canon EF-S 18-55mm f/3.5-5.6 IS II SLR Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "Canon EF-S 55-250mm F4-5.6 IS STM Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "Canon EF-S 8114B002 18-55mm IS STM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "Canon EF-S 10-18mm f/4.5-5.6 IS STM Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "Canon EF-S 18-135mm f/3.5-5.6 IS Standard Zoom Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "Canon EF-S 18-135mm f/3.5-5.6 IS STM Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "Canon EF-S 15-85mm f/3.5-5.6 IS USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "EF-S 18-200mm f/3.5-5.6 IS Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "Canon EF-S 15-85mm f/3.5-5.6 IS USM Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "Canon EF-S 10-22mm f/3.5-4.5 USM SLR Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (EF-M-Mount)",
+          "model": "Canon EF-S 17-55mm f/2.8 IS USM Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (RF-Mount)",
+          "model": "RF 35mm F1.8 Macro IS STM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Canon (RF-Mount)",
+          "model": "RF 50mm F1.2 L USM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Canon (RF-Mount)",
+          "model": "RF 24–105mm F4 L IS USM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Fuji G-Mount",
+          "model": "GF110mmF2 R LM WR",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Fuji G-Mount",
+          "model": "FUJINON LENS GF23mmF4 R LM WR",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Fuji G-Mount",
+          "model": "FUJINON LENS GF250mmF4 R LM OIS WR",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Fuji G-Mount",
+          "model": "GF100-200mmF5.6 R LM OIS WR",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Fuji G-Mount",
+          "model": "GF32-64mmF4 R LM WR",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "Fujinon XF 27mm F2.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 39mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "Fujinon XF 27mm F2.8 Silver",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 39mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "Fujinon XF 60mm F2.4 R Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 39mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF23mmF2 R WR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 43mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF50mmF2 R WR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF16mmF2.8 R WR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "Fujinon XF 35mm F1.4 R",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF18mmF2 R",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "Fujifilm XC 50-230mm F4.5-6.7 Silver Camera Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF23mmF1.4 R",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF56mmF1.2 R",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF56mmF1.2 R APD",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF80mmF2.8 R LM OIS WR Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF90mmF2 R LM WR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "Fujinon XF 16mmF1.4 R WR",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XC15-45mmF3.5-5.6 OIS PZ",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "Fujifilm XC 16-50mm F3.5-5.6 OIS II Zoom Camera Lens, Silver",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "Fujifilm XC 50-230mm F4.5-6.7 Silver Camera Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF18-55mmF2.8-4 R",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF55-200mmF3.5-4.8 R LM OIS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "Fujinon XF 18-135mm F3.5-5.6 R LM OIS WR",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF10-24mmF4 R OIS",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS XF50-140mmF2.8 R LM OIS WR",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "Fujinon XF 16-55mmF2.8 R LM WR",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "XF100-400mmF4.5-5.6 R LM OIS WR",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS MKX18-55mmT2.9",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Fuji X-Series",
+          "model": "FUJINON LENS MKX50-135mmT2.9",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 11-27.5mm f/3.5-5.6 (White)",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 40.5mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 18.5mm f/1.8 (Black)",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 40.5mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 18.5mm f/1.8 (Silver)",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 40.5mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 18.5mm f/1.8 (White)",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 40.5mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 6.7-13mm f/3.5-5.6 VR (Silver)",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 40.5mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 32mm f/1.2 (Black)",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 32mm f/1.2 (Silver)",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 6.7-13mm f/3.5-5.6 VR (Black)",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 18-55mm f/3.5-5.6G Auto Focus-S DX VR Nikkor Zoom Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 18-55mm f/3.5-5.6G VR II Auto Focus-S DX NIKKOR Zoom Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 2137 50mm f/1.8D Auto Focus Nikkor Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 24mm f/2.8D Auto Focus Nikkor Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 28mm f/2.8D Auto Focus Nikkor Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 35mm f/1.8G Auto Focus-S DX Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 35mm f/2D Auto Focus Wide-Angle Nikkor Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 40mm f/2.8G Auto Focus-S DX Micro NIKKOR Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 50mm f/1.2 Nikkor AI-S Manual Focus Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 50mm f/1.4D Auto Focus Nikkor Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 85mm f/3.5G AF-S DX ED VR Micro Nikkor Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 10-100mm f/4.0-5.6 VR (Black)",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 10-100mm f/4.0-5.6 VR (Silver)",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 1 NIKKOR 10-100mm f/4.0-5.6 VR (White",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon Auto Focus-S DX NIKKOR 55-200MM f/4-5.6G ED VR II Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 35mm f/1.8G ED Auto Focus-S FX NIKKOR Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 50mm f/1.4G SIC SW Prime Auto Focus-S Nikkor Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 50mm f/1.8G Auto Focus-S NIKKOR FX Lens – Fixed",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 55-300mm f/4.5-5.6G ED VR Auto Focus-S DX Nikkor Zoom Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon AF-S NIKKOR 50mm f/1.8G Special Edition Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF-P DX NIKKOR 70-300mm f/4.5-6.3G ED",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF-P DX NIKKOR 70-300mm f/4.5-6.3G ED VR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon AF-S NIKKOR 50mm f/1.8G Special Edition Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 18-105mm f/3.5-5.6 AF-S DX VR ED Nikkor Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 18-140mm f/3.5-5.6G ED VR Auto Focus-S DX NIKKOR Zoom Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 18-300mm f/3.5-6.3G ED VR Auto Focus-S DX Nikkor Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 28mm f/1.8G Auto Focus-S NIKKOR lens – Fixed",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 35mm f/1.4G Auto Focus-S FX SWM Nikkor Lens – Fixed",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 70-200mm f/4G ED VR Nikkor Zoom Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 70-300mm f/4.5-5.6G ED IF AF-S VR Nikkor Zoom Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 85mm f/1.8G Auto Focus-S NIKKOR Lens – Fixed",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon AF-P DX NIKKOR 10-20mm f/4.5-5.6G IF VR Zoom Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon AF DC-NIKKOR 135mm f/2D Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon NIKKOR Z 24-70mm f/4 S Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon AF-S DX NIKKOR 16-80mm f/2.8-4E ED VR Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 18-200mm f/3.5-5.6G ED IF AF-S DX NIKKOR VR II Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 24-85mm f/3.5-4.5G ED AF-S VR Nikkor Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF-S NIKKOR 24mm f/1.8G ED",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF-S NIKKOR 58mm f/1.4G",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF Nikkor 180mm f/2.8D IF-ED",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF DC-NIKKOR 105mm f/2D",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF Zoom-NIKKOR 24-85mm f/2.8-4D IF",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF-S VR Zoom-NIKKOR 24-120mm f/3.5-5.6G IF-ED",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 10-24mm f/3.5-4.5G ED Auto Focus-S DX Nikkor Wide-Angle Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 12-24mm f/4G ED IF Auto Focus-S DX Nikkor Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 16-35mm f/4G ED VR II Auto Focus-S IF SWM Nikkor Wide Angle Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 17-35mm f/2.8D ED-IF AF-S Zoom Nikkor Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 17-55mm f/2.8G ED-IF AF-S DX Nikkor Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 18-300mm f/3.5-5.6G AF-S DX Nikkor Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 18-35mm f/3.5-4.5G ED AF-S NIKKOR Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 24-120mm f/4G ED VR AF-S NIKKOR Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 24-70mm f/2.8G ED Auto Focus-S Nikkor Wide Angle Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 24mm f/1.4G ED AF-S RF SWM Prime Wide-Angle Nikkor Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 24mm f/3.5D ED PC-E Nikkor Ultra-Wide Angle Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 28-300mm f/3.5-5.6G ED VR Auto Focus-S Nikkor Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 300mm f/4.0D IF-ED Auto Focus-S Nikkor Lens – Fixed",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 45mm f/2.8D ED PC-E Micro Nikkor Manual Focus Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 70-200mm f/2.8G ED VR II AF-S Nikkor Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 80-200mm f/2.8D ED Auto Focus Zoom Nikkor Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 80-400mm f/4.5-5.6G ED VR AF-S NIKKOR Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon 85mm f/1.4G AF-S Nikkor Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon AF-S NIKKOR 20mm f/1.8G ED Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "Nikon AF-S NIKKOR 300MM f/4E PF ED VR",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF-S NIKKOR 20mm f/1.8G ED",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF-S NIKKOR 28mm f/1.4E ED",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF-S NIKKOR 105mm f/1.4E ED",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "NIKKOR Z 24-70mm f/2.8 S",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "NIKKOR Z 14-30mm f/4 S",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Nikon",
+          "model": "AF-S NIKKOR 24-70mm f/2.8E ED VR",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Nikon (Z-Mount)",
+          "model": "NIKKOR Z 35mm f/1.8 S",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Nikon (Z-Mount)",
+          "model": "NIKKOR Z 50mm f/1.8 S",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Nikon (Z-Mount)",
+          "model": "NIKKOR Z 24-70mm f/4 S",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Nikon (Z-Mount)",
+          "model": "NIKKOR Z 58mm f/0.95 S Noct",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Nikon (Z-Mount)",
+          "model": "NIKKOR Z 24-70mm f/2.8 S",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Nikon (Z-Mount)",
+          "model": "NIKKOR Z 14-30mm f/4 S",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "M. Zuiko Pro",
+          "model": "M.Zuiko ED 12-40mm f2.8 PRO",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko Pro",
+          "model": "M.Zuiko ED 17mm f1.2 PRO",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko Pro",
+          "model": "M.Zuiko ED 45mm f1.2 PRO",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko Pro",
+          "model": "M.Zuiko ED 12-40mm f2.8 PRO",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko Pro",
+          "model": "M.Zuiko ED 40-150mm f2.8 PRO",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "M. Zuiko Pro",
+          "model": "M.Zuiko ED 12-100mm f4.0 IS PRO",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "M. Zuiko Pro",
+          "model": "M.Zuiko ED 300mm f4.0 IS PRO",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "M. Zuiko Premium",
+          "model": "M.Zuiko 45mm f1.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 37mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko Premium",
+          "model": "M.Zuiko 12mm f2.0",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko Premium",
+          "model": "M.Zuiko 17mm f1.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko Premium",
+          "model": "M.Zuiko 25mm f1.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko Premium",
+          "model": "M.Zuiko ED 30mm f3.5 Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko Premium",
+          "model": "M.Zuiko ED 60mm f2.8 Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko Premium",
+          "model": "M. Zuiko Digital ED 75mm F1.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko",
+          "model": "M.Zuiko ED 14-42mm F3.5-5.6 EZ",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 37mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko",
+          "model": "M.Zuiko 14-42mm f3.5-5.6 II R",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 37mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko",
+          "model": "M.Zuiko ED 9-18mm f4.0-5.6",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko",
+          "model": "M.Zuiko ED 12-50mm f3.5-6.3 EZ",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko",
+          "model": "M.Zuiko ED 14-150mm f4.0-5.6 II",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko",
+          "model": "M.Zuiko ED 40-150mm f4.0-5.6 R",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko",
+          "model": "M.Zuiko ED 75-300mm f4.8-6.7 II",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "M. Zuiko",
+          "model": "M.Zuiko ED 12-200mm F3.5-6.3",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G X Vario Power Zoom Lens, 14-42mm, F3.5-5.6 ASPH. - H-PS14042S",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 37mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G X Vario II Lens, 14-42mm, F3.5-5.6 ASPH. - H-FS1442AKA",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G VARIO Ultra Compact Zoom 35-100mm / F4.0-5.6 H-FS35100K",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G X Vario Power Zoom Lens, 45-175mm, F4.0-5.6 ASPH. - H-PS45175K",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G VARIO Lens, 45-200mm, F4.0-5.6 II, - H-FSA45200",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G Vario Lens, 14-45mm, F3.5-5.6 ASPH. - H-FS014045",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G X VARIO Professional Lens, 12-35mm, F2.8 II ASPH., Mirrorless Micro Four Thirds Mount, POWER Optical I.S. - H-HSA12035",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G X VARIO Professional Lens, 35-100mm, F2.8 II ASPH., Mirrorless Micro Four Thirds Mount, POWER Optical I.S. - H-HSA35100",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G Vario Lens, 14-140mm, F3.5-5.6 ASPH., Micro Four Thrids, POWER Optical I.S. - H-FS14140K",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G LEICA DG VARIO-ELMARIT Professional Lens, 12-60mm, F2.8-4.0 ASPH., Mirrorless Micro Four Thirds Mount, POWER Optical I.S. - H-ES12060",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G VARIO Lens, 100-300mm, F4.0-5.6 II, Mirrorless Micro Four Thirds Mount, POWER Optical I.S. - H-FSA100300",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Panasonic zoom",
+          "model": "LUMIX G LEICA DG VARIO-ELMAR Lens, 100-400mm, F4.0-6.3 ASPH., Professional Micro Four Thirds, POWER Optical I.S. - H-RS100400",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Panasonic Speciality",
+          "model": "LUMIX G X Vario Power Zoom Lens, 14-42mm, F3.5-5.6 ASPH., Micro Four Thirds, POWER Optical I.S. - H-PS14042S",
+          "size": "VND Size: 67mm  </br>[ Step-Up Ring: 37mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Speciality",
+          "model": "LUMIX G X Vario Power Zoom Lens, 45-175mm, F4.0-5.6 ASPH., Micro Four Thirds, POWER Optical I.S. - H-PS45175K",
+          "size": "VND Size: 67mm  </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX G LEICA DG SUMMILUX Lens, 15mm, F1.7 ASPH., Professional Micro Four Thirds - H-X015K",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX G Micro 4/3 LEICA DG SUMMILUX 25mm/F1.4 ASPH. Lens H-X025",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX G LEICA DG VARIO-ELMARIT Professional Lens, 12-60mm, F2.8-4.0 ASPH., Mirrorless Micro Four Thirds Mount, POWER Optical I.S. - H-ES12060",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX G LEICA DG SUMMILUX Lens, 12mm, F1.4 ASPH., Wide Angle, Professional Mirrorless Micro Four Thirds - Black - H-X012",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX G LEICA DG VARIO-ELMARIT Professional Lens, 50-200mm, F2.8-4.0 ASPH., Mirrorless Micro Four Thirds Mount, POWER O.I.S. - H-ES50200",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX G LEICA DG VARIO-ELMARIT PROFESSIONAL LENS, 8-18MM, F2.8-4.0 ASPH., MIRRORLESS MICRO FOUR THIRDS, DUST/SPLASHPROOF",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX G LEICA DG VARIO-ELMAR Lens, 100-400mm, F4.0-6.3 ASPH., Professional Micro Four Thirds, POWER Optical I.S. - H-RS100400",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX S PRO 70-200mm F4 L-Mount Telephoto Lens, LEICA Certified - S-R70200",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX S PRO 50mm F1.4 L-Mount Lens, LEICA Certified - S-X50",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX S 24-105mm F4 L-Mount Lens - S-R24105",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Panasonic Leica",
+          "model": "LUMIX G LEICA DG ELMARIT PROFESSIONAL LENS, 200mm, F2.8 ASPH.",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Panasonic Fixed Focal Length",
+          "model": "LUMIX G II Lens, 20mm, F1.7 ASPH., Micro Four Thirds - H-H020AK",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Fixed Focal Length",
+          "model": "LUMIX G Micro 4/3 LEICA DG SUMMILUX 25mm/F1.4 ASPH. Lens H-X025",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Fixed Focal Length",
+          "model": "LUMIX G Macro Lens, 30mm, F2.8 ASPH., Micro Four Thirds, MEGA Optical I.S. - H-HS030",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Fixed Focal Length",
+          "model": "LUMIX G LEICA DG VARIO-ELMARIT Professional Lens, 12-60mm, F2.8-4.0 ASPH.",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Fixed Focal Length",
+          "model": "LUMIX G LEICA DG SUMMILUX Lens, 12mm, F1.4 ASPH.",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Panasonic Fixed Focal Length",
+          "model": "LUMIX S PRO 50mm F1.4 L-Mount Lens, LEICA Certified - S-X50",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Panasonic Fixed Focal Length",
+          "model": "LUMIX G LEICA DG ELMARIT PROFESSIONAL LENS, 200mm, F2.8 ASPH.",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX-FA35mmF2",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX DA 21mm F3.2 AL Limited",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX DA 40mm F2.8 Limited",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-DA 35mm F2.4 AL",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-FA 43mm f/1.9 Limited",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-FA 50mm F1.4",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX DA 50-200 mm F4-5.6 ED WR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX DA 70mm F2.4 Limited",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-FA 77mm f/1.8 Limited",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX DA 35mm F2.8 Macro Limited",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX D-FA Macro 50mm F2.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-D FA Macro 100mm F2.8 WR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-DA 50mm F1.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX DA 20-40mm F2.8-4 ED Limited DC WR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX DA 55-300mm F4 5.8 ED WR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX-DA 55-300mm F4.5-6.3ED PLM WR RE",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX DA 55mm F1.4 SDM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-DA 18-135mm F3.5-5.6 ED AL[IF] DC WR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX-D FA 28-105mm F3.5-5.6 ED DC WR",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-DA 60-250mm F4 ED[IF] SDM",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX-D FA* 50mm F1.4 SDM AW Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX DA 16-85mm f/3.5-5.6 ED DC WR",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-DA 16-50mm F2.8 ED AL[IF] SDM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX-D FA 70-200mm F2.8ED DC AW",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-DA 200mm F2.8 ED[IF] SDM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "smc PENTAX-DA 300mm F4 ED[IF] SDMfr",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX-DA 11-18mmF2.8ED DC AW",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Pentax K-mount",
+          "model": "HD PENTAX-D FA 24-70mm F2.8 ED SDM WR",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 75mm F2.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 200mm F4 [IF]",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 45mm F2.8",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX D-FA 645 55mm F2.8 AL (IF) SDM AW",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-DA 50-135mm F2.8 ED [IF] SDM",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 150-300mm F5.6 ED [IF]",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 150mm F2.8 [IF]",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 120mm F4 Macro",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "HD PENTAX D-FA 645 MACRO 90mm F2.8 ED AW SR",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 45-85mm F4.5",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 80-160mm F4.5",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 400mm F5.6 ED [IF]",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 35mm F3.5 AL [IF]",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "HD PENTAX-DA 645 28-45mm F4.5 ED AW SR",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 35-55mm F4.5 AL",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "HD PENTAX-D FA645 35mm F3.5 AL [IF]",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Pentax 645Z-mount",
+          "model": "smc PENTAX-FA645 55-110mm F5.6",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Rokinon Auto Focus",
+          "model": "35mm F2.8 AF Sony E Compact Full Frame",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Rokinon Auto Focus",
+          "model": "50mm F1.4 AF Sony E FULL FRAME HIGH SPEED",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Rokinon Auto Focus",
+          "model": "35mm F1.4 AF Sony E High Speed Full Frame Wide Angle",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Rokinon Auto Focus",
+          "model": "85mm F1.4 AF Canon Full Frame Tele",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "21mm F1.4 HIGH SPEED WIDE ANGLE",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "50mm F1.2 HIGH SPEED",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "12mm F2.0 HIGH SPEEDWIDE ANGLE",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "35mm F1.2 HIGH SPEED COMPACT",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "100mm F2.8 FULL FRAME MACRO",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "85mm F1.4 FULL FRAME",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "16mm F2.0 HIGH SPEED SUPER WIDE ANGLE",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "20mm F1.8 FULL FRAME WIDE ANGLE",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "24mm F1.4 FULL FRAME WIDE ANGLE",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "35mm F1.4 FULL FRAME WIDE ANGLE",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "50mm F1.4 FULL FRAME HIGH SPEED",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "135mm F2.0 FULL FRAME TELEPHOTO",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon Digital Photo",
+          "model": "24mm F3.5 FULL FRAME TILT-SHIFT",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Rokinon CINE DS",
+          "model": "35mm T1.3 HIGH SPEED COMPACT",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Rokinon CINE DS",
+          "model": "50mm T1.3 HIGH SPEED",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Rokinon CINE DS",
+          "model": "100mm T3.1 FULL FRAME MACRO",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Rokinon CINE DS",
+          "model": "85mm T1.5 FULL FRAME",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Rokinon CINE DS",
+          "model": "16mm T2.2 HIGH SPEED WIDE ANGLE",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon CINE DS",
+          "model": "24mm T1.5 FULL FRAME WIDE ANGLE",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon CINE DS",
+          "model": "35mm T1.5 FULL FRAME WIDE ANGLE",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon CINE DS",
+          "model": "50mm T1.5 FULL FRAME",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon CINE DS",
+          "model": "135mm T2.2 FULL FRAME TELEPHOTO",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon CINE",
+          "model": "21mm T1.5 HIGH SPEED WIDE ANGLE",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Rokinon CINE",
+          "model": "12mm T2.2 HIGH SPEED WIDE ANGLE",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Rokinon CINE",
+          "model": "24mm T1.5 FULL FRAME WIDE ANGLE",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Rokinon CINE",
+          "model": "16mm T2.2 HIGH SPEED WIDE ANGLE",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "9-27mm f3.5-5.6 OIS Zoom Lens for NX Mini",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 39mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "17mm f1.8 Wide Prime Lens for NX Mini",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 39mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "9-27mm f3.5-5.6 OIS Zoom Lens for NX Mini",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 39mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "16-50mm Power Zoom Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 43mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "16mm f2.4 Ultra Wide Angle Lens - White",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 43mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "16-50mm f3.5-5.6 ED OIS Power Zoom Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 43mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "45mm f1.8 Prime Lens - Black",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 43mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "45mm f1.8 2D/3D Prime Lens - Black",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 43mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "16mm f2.4 Ultra Wide Angle Lens - Black\\",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 43mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "30mm f2.0 Prime Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 43mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "60mm f2.8 Macro ED SSA OIS Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "50-200mm f4-5.6 ED OIS III Telephoto Zoom Lens -Black",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "18-55mm f3.5-5.6 OIS III Zoom Lens",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "18-200mm F3.5-6.3 ED OIS Super Zoom Lens",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "16-50mm f2-2.8 S ED OIS Zoom Lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "SAMSUNG NX LENS",
+          "model": "50-150mm f2.8 S ED OIS Telephoto Zoom Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Auto Focus",
+          "model": "AF 24mm F2.8 FE",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "SAMYANG Auto Focus",
+          "model": "AF 35mm F2.8 FE",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "SAMYANG Auto Focus",
+          "model": "AF 35mm F1.4 FE",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "SAMYANG Auto Focus",
+          "model": "100mm F2.8 ED UMC MACRO",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "SAMYANG Auto Focus",
+          "model": "AF 85mm F1.4 EF",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "35mm F1.2 ED AS UMC CS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "50mm AS UMC CS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "85mm F1.8 ED UMC CS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "12mm F2.0 NCS CS",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "MF 85mm F1.4 RF",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "85mm F1.4 AS IF UMC",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "20mm F1.8 ED AS UMC",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "24mm F1.4 ED AS IF UMC",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "35mm F1.4 AS UMC",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "50mm F1.4 AS UMC",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Manual Focus",
+          "model": "135mm F2.0 ED UMC",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "21mm T1.5 ED AS UMC CS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "35mm T1.3 AS UMC CS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "50mm T1.3 AS UMC CS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "100mm T3.1 VDSLR ED UMC MACRO",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "12mm T2.2 Cine NCS CS",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "85mm T1.5 VDSLR AS IF UMC II",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "20mm T1.9 ED AS UMC",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "24mm ED AS IF UMC II",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "35mm AS UMC II",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "T1.5 50mm AS UMC II",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "135mm T2.2 VDSLR ED UMC",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "SAMYANG Cine",
+          "model": "16mm T2.2 ED AS UMC CS II",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "19mm F2.8 DN | A - Silver",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "19mm F2.8 DN | A - Black",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "16mm F1.4 DC DN | C",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "35mm F1.4 DG HSM | A",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "18-35mm F1.8 DC HSM | A",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "24mm F1.4 DG HSM | A",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "28mm F1.4 DG HSM I Art",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "10-20mm F4-5.6 EX DC (HSM)*",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "40mm F1.4 DG HSM I Art",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "10-20mm F3.5 EX DC HSM",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sigma Wide angle Lens",
+          "model": "24-35mm F2 DG HSM | A",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sigma Standard Lens",
+          "model": "30mm F2.8 DN | A - Silver",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Standard Lens",
+          "model": "30mm F2.8 DN | A - Black",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Standard Lens",
+          "model": "30mm F1.4 DC DN | C",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Standard Lens",
+          "model": "30mm F1.4 DC HSM | A",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Standard Lens",
+          "model": "17-70mm F2.8-4 DC Macro (OS)* HSM | C",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sigma Standard Lens",
+          "model": "50mm F1.4 DG HSM | A",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sigma Standard Lens",
+          "model": "17-50mm F2.8 EX DC (OS)* HSM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sigma Standard Lens",
+          "model": "24-70mm F2.8 DG OS HSM | A",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sigma Standard Lens",
+          "model": "24-105mm F4 DG (OS)* HSM | A",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sigma Telephoto Lens",
+          "model": "60mm F2.8 DN | A - Black",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Telephoto Lens",
+          "model": "60mm F2.8 DN | A - Silver",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 46mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Telephoto Lens",
+          "model": "56mm F1.4 DC DN | C",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Telephoto Lens",
+          "model": "70-300mm F4-5.6 APO DG Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Telephoto Lens",
+          "model": "70-300mm F4-5.6 DG Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Telephoto Lens",
+          "model": "100-400mm F5-6.3 DG OS HSM | C",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Sigma Telephoto Lens",
+          "model": "APO 70-200mm F2.8 EX DG OS HSM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sigma Telephoto Lens",
+          "model": "135mm F1.8 DG HSM | A",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sigma Telephoto Lens",
+          "model": "50-100mm F1.8 DC HSM | A",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sigma Telephoto Lens",
+          "model": "70-200mm F2.8 DG OS HSM | S",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sigma Multi-Purpose Lens",
+          "model": "18-200mm F3.5-6.3 DC Macro OS HSM | C",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Multi-Purpose Lens",
+          "model": "18-250mm F3.5-6.3 DC (OS)* MACRO HSM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Multi-Purpose Lens",
+          "model": "18-300mm F3.5-6.3 DC MACRO OS HSM | C",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sigma Macro Lens",
+          "model": "70mm F2.8 DG MACRO | A",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Macro Lens",
+          "model": "70-300mm F4-5.6 APO DG Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 58mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Macro Lens",
+          "model": "105mm F2.8 EX DG OS HSM Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Macro Lens",
+          "model": "18-200mm F3.5-6.3 DC Macro OS HSM | C",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Macro Lens",
+          "model": "18-250mm F3.5-6.3 DC (OS)* MACRO HSM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sigma Macro Lens",
+          "model": "150mm F2.8 EX DG OS HSM APO Macro",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sigma Macro Lens",
+          "model": "17-70mm F2.8-4 DC Macro (OS)* HSM | C",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sigma Macro Lens",
+          "model": "18-300mm F3.5-6.3 DC MACRO OS HSM | C",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E PZ 16–50 mm F3.5–5.6 OSS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 40.5mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 16 mm F2.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 18–55 mm F3.5–5.6 OSS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 20 mm F2.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "Sonnar® T* E 24 mm F1.8 ZA",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 28 mm F2",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 30 mm F3.5 Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 35 mm F1.8 OSS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "Sonnar T* FE 35 mm F2.8 ZA",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 50 mm F1.8 OSS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 50mm F1.8",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 55–210 mm F4.5-6.3 OSS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "Sonnar® T* FE 55 mm F1.8 ZA",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 18-135mm F3.5-5.6 OSS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "Vario-Tessar T* E 16-70 mm F4 ZA OSS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 28-70 mm F3.5-5.6 OSS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 50 mm F2.8 Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 10–18 mm F4 OSS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 18–200 mm F3.5–6.3 OSS LE",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 18–200 mm F3.5–6.3 OSS LE",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 90 mm F2.8 Macro G OSS",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 24mm F1.4 GM",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 85mm F1.8",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E 18–200 mm F3.5-6.3 OSS",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E PZ 18–200 mm F3.5-6.3 OSS",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "Vario-Tessar T* FE 24-70 mm F4 ZA OSS",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 100mm F2.8 STF GM OSS",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "Vario-Tessar T* FE 16–35 mm F4 ZA OSS",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 24-240mm F3.5-6.3 OSS",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "Distagon T* FE 35 mm F1.4 ZA",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "Planar T* FE 50mm F1.4 ZA",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 70-200 mm F4 G OSS",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 70-300mm F4.5-5.6 G OSS",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 24–105 mm F4 G OSS Lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "G Master FE 100-400mm super-telephoto zoom lens",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "E PZ 18–105 mm F4 G OSS",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 70-200 mm F2.8 GM OSS",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 85 mm F1.4 GM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 135mm F1.8 GM",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 16-35mm F2.8 GM",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sony E- Mount",
+          "model": "FE 24-70 mm F2.8 GM",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 30 mm F2.8 Macro SAM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 50 mm F1.8 SAM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 49mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 18–55 mm F3.5–5.6 SAM II",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "35 mm F1.4 G",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 35 mm F1.8 SAM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "50 mm F1.4",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "50 mm F2.8 Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 55–200 mm F4–5.6 SAM II 85 mm F2.8 SAM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "100 mm F2.8 Macro",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 16–105 mm F3.5–5.6",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "Vario-Sonnar® T* DT 16–80 mm F3.5-4.5 ZA",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 18–135 mm F3.5–5.6 SAM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 18-250 mm F3.5–6.3",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 55–300 mm F4.5–5.6 SAM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "70–300 mm F4.5–5.6 G SSM",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "28–75 mm F2.8 SAM",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 16–50 mm F2.8 SSM",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "20 mm F2.8",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "Distagon T* 24 mm F2 ZA SSM",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "Planar T* 50 mm F1.4 ZA SSM",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "135 mm F2.8 [T4.5] STF lens",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "DT 11–18 mm F4.5–5.6",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "Vario-Sonnar® T* 16-35 mm F2.8 ZA SSM II",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "Vario-Sonnar® T* 24–70 mm F2.8 ZA SSM II",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "Sonnar® T* 135 mm F1.8 ZA",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "70–400 mm F4–5.6 G SSM II",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "70–200 mm F2.8 G SSM II",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "Vario-Sonnar® T* 16-35 mm F2.8 ZA SSM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Sony A- Mount",
+          "model": "Vario-Sonnar® T* 24-70 mm F2.8 ZA SSM",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "SP 70-300mm F/4-5.6 Di VC USD",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "SP 90mm F/2.8 Di MACRO 1:1 VC USD",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "28-300mm F/3.5-6.3 Di VC PZD",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "SP 17-50mm F/2.8 Di II LD",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "SP 28-75mm F/2.8 XR Di LD",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "70-210mm /F4 Di VC USD",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "SP 35mm F/1.8 Di VC USD",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "SP 45mm F/1.8 Di VC USD",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "SP 85mm F/1.8 Di VC USD",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "100-400mm F/4.5-6.3 Di VC USD",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "SP 17-50mm F/2.8 XR Di II VC",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "SP 70-200mm F/2.8 Di VC USD G2",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Tamron Di",
+          "model": "SP 24-70mm F/2.8 Di VC USD G",
+          "size": "VND Size: 82mm"
+        },
+        {
+          "make": "Tamron Di II",
+          "model": "SP AF60mm F/2 Di II LD [IF] MACRO 1:1",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 55mm > 67mm ]"
+        },
+        {
+          "make": "Tamron Di II",
+          "model": "18-200mm F/3.5-6.3 Di II VC",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Tamron Di II",
+          "model": "18-270mm F/3.5-6.3 Di II VC PZD",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Tamron Di II",
+          "model": "16-300mm F/3.5-6.3 Di II VC PZD MACRO",
+          "size": "VND Size: 67mm"
+        },
+        {
+          "make": "Tamron Di II",
+          "model": "18-400mm F/3.5-6.3 Di II VC HLD",
+          "size": "VND Size: 77mm </br>[ Step-Up Ring: 72mm > 77mm ]"
+        },
+        {
+          "make": "Tamron Di II",
+          "model": "17-35mm F/2.8-4 Di OSD",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Tamron Di II",
+          "model": "10-24mm F/3.5-4.5 Di II VC HLD",
+          "size": "VND Size: 77mm"
+        },
+        {
+          "make": "Tamron Di III",
+          "model": "14-150mm F/3.5-5.8 Di III",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 52mm > 67mm ]"
+        },
+        {
+          "make": "Tamron Di III",
+          "model": "18-200mm F/3.5-6.3 Di III VC",
+          "size": "VND Size: 67mm </br>[ Step-Up Ring: 62mm > 67mm ]"
+        },
+        {
+          "make": "Tamron Di III",
+          "model": "28-75mm F/2.8 Di III RXD",
+          "size": "VND Size: 67mm"
+        }
+      ]
+  };
+  $("#make").change(function () {
+      $('#model').empty().append($('<option></option>').val('Select Model').html('Select Model'));
+      var matchVal = $("#make option:selected").text();
+      a.Cars.filter(function (car) {
+          if (car.make == matchVal) {
+              $("#model").append($('<option></option>').val(car.size).html(car.model));
+          }
+      });
+  });
+
+  $('#model').change(function () {
+      //alert($(this).val());
+      //var getModelval = $('#model').val();
+      $('#size').html($(this).val());
+      //$('#size').val(.val(id));
+
+
+  });
+  </script>
+
+
+</div>

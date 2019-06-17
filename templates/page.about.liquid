@@ -1,0 +1,26 @@
+<script>
+$(document).ready(function(){
+$(".tag-banner").hover(function () {
+  $(this).parent('.banner-item').toggleClass("text-hover");
+});
+});
+</script>
+
+<div class="what-we-do-banner">
+  <div class="we-explore-banner banner-item"><span class="tag-banner">We Explore.</span></div>
+  <div class="we-design-banner banner-item"><span class="tag-banner">We Design.</span></div>
+  <div class="we-shoot-banner banner-item"><span class="tag-banner">We Shoot.</span></div>
+</div>
+<!-- /templates/page.liquid -->
+<div class="wrapper page-margin">
+  <div class="grid">
+    <div class="grid__item one-whole">
+      {% comment %}<div class="pp-page-title-container">
+      	<h2 class="title text-center pp-page-title">{{ page.title }}</h2>
+      </div>{% endcomment %}
+      <div class="rte">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>

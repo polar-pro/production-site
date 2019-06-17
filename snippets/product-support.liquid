@@ -1,0 +1,93 @@
+<!-- /snippets/product.liquid -->
+{% comment %}
+
+  Rich snippets (itemscope, itemtype, etc.) for products are a theme requirement,
+  and allow search engines to easily understand what the content is.
+
+  For more information on these Scheme.org tags, visit:
+    - http://schema.org/docs/gs.html
+
+{% endcomment %}
+<div itemscope itemtype="http://schema.org/Product" class="product-page product-support-page">
+  <div class="wrapper">
+
+    <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+    <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
+
+    {% if settings.product_breadcrumbs %}
+      {% include 'breadcrumb-support' %}
+    {% endif %}
+
+    <h2 class="title product-mobile-title" itemprop="name">{{ product.title }}</h2>
+
+    <div class="grid product-single">
+
+      <div class="grid__item large--one-half" id="productInfo">
+
+        <div class="text-left">
+            <div class="dekstop-prod-form">
+            <h2 class="title" itemprop="name">{{ product.title }}</h2>
+          </div>
+        </div>
+
+        <!-- <div class='infographics'>
+          <div class='item free-ship'>Free US Shipping</div>
+          <div class='item lifetime'>Lifetime Warranty</div>
+          <div class='item returns'>60-Day Returns</div>
+        </div> -->
+      </div>
+    </div>
+    <div class='below-content'>
+      <div class='product-support'>
+        <div class="large--one-whole">
+          {{ product.metafields["global"]["one-whole-support"] }}
+        </div>
+      </div><!--product-overview end-->
+      <div class='tech-specs'>
+        <div class="large--one-whole clearfix">
+          {% if product.metafields.global.one-whole-specs %}
+            <h3>Tech Specs</h3>
+            {{ product.metafields["global"]["one-whole-specs"] }}
+          {% endif %}
+        </div>
+      </div><!--tech-specs-->
+      <div class='tips-field'>
+        <div class="large--one-whole clearfix">
+          {% if product.metafields.global.one-whole-tips %}
+            <h3>Tips</h3>
+            {{ product.metafields["global"]["one-whole-tips"] }}
+          {% endif %}
+        </div>
+      </div><!--tips-->
+    </div>
+  </div>
+</div>
+
+<script>
+  $(window).load(function() {
+    $('.product-single__photos').slick({
+      adaptiveHeight: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      fade: true,
+      asNavFor: '.thumbs'
+    });
+    $('.thumbs').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      asNavFor: '.product-single__photos',
+      dots: true,
+      centerMode: false,
+      arrows: false,
+      focusOnSelect: true
+    });
+
+    $('[data-fancybox="gallery"]').fancybox({
+        thumbs : {
+            showOnStart : true
+        },
+        hash : true
+    })
+  });
+</script>

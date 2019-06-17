@@ -1,0 +1,348 @@
+<!-- use for slider -->
+<!-- <div class="polarpro-slider-container">
+	<div id="polarpro-slider" class="owl-carousel">
+	   <div class="item">
+			<div class="pp-slider-layered">
+				<a href="/collections/blackfriday-cybermonday"><img src="{{ '1920x600_Holiday_2017_4.jpg' | asset_url }}" /></a>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<!-- standard banner -->
+<!-- <div class="polarpro-hero-banner-container ">
+	<div class="banner-content">
+		<h2>Explore, Travel, and Capture Perfection<br />Every Step of the Way</h2>
+		<p>Production-grade filters obsessively built<br /> to shoot the highest quality photos + videos</p>
+		<a href="/pages/shop-by-aircraft" class='banner-btn'>Shop By Drone Model</a>
+		<a href="/collections/camera" class='banner-btn'>Shop By Camera</a>
+		<div class='infographics'>
+			<div class='item free-ship'>Free US Shipping</div>
+			<div class='item lifetime'>Lifetime Warranty</div>
+			<div class='item returns'>60-Day Returns</div>
+		</div>
+	</div>
+</div> -->
+
+<!-- bf banner -->
+<div class="polarpro-hero-banner-container">
+	<div class="banner-content">
+		<h2>Dedicated to those who</h2>
+		<p>Chase The Perfect <span>Shot</span></p>
+		<div class="shop-by-select-container">
+			<div class="styled-select">
+				<select class="shop-by-select" name="shop-by-select" id='shop-by-select'>
+					<option value="" disabled selected>Select Device</option>
+					<option value="/collections/mavic-2-filters-accessories">Mavic 2</option>
+					<option value="/collections/osmo-pocket-filters-accessories">Osmo Pocket</option>
+					<option value="/collections/dji-mavic-air-filters-and-accessories">Mavic Air</option>
+					<option value="/collections/dji-mavic-filters-and-accessories">Mavic Pro/Platinum</option>
+					<option value="/pages/shop-by-device">GoPro</option>
+					<option value="/collections/camera/products/quartzline-filters">Camera</option>
+
+				</select>
+			</div>
+			<button type="button" name="button" id="go" onclick="gotosite()" class='find-my-gear'>Find my Gear</button>
+		</div>
+	</div>
+</div>
+
+<!-- 2nd banner container -->
+<!-- <div class="polarpro-banner-container">
+	<div style=''>
+		<div class="grid-uniform">
+			<div class="grid__item large--one-third medium--one-whole small--one-whole push-left">
+				<div class="section-name">
+					<h2>QuartzLine</h2>
+					<p>Full Frame Filters</p>
+				</div>
+				<a href='/products/quarzlinefilter'>
+					<img src="{{ 'QL_Filter_SubBanner.png' | asset_url }}" class=''>
+					<span>Shop Now</span>
+					<div class='name'></div>
+				</a>
+			</div>
+			<div class="grid__item large--one-third medium--one-whole small--one-whole">
+				<div class="section-name">
+					<h2>Mavic 2</h2>
+					<p>Aerial ND's</p>
+				</div>
+				<a href='/collections/mavic-2-filters-accessories'>
+					<img src="{{ 'Mavic2_Gradient_Filter_3Pack.png' | asset_url }}">
+					<span>Shop Now</span>
+					<div class='name'></div>
+				</a>
+			</div>
+			<div class="grid__item large--one-third medium--one-whole small--one-whole push-right">
+				<div class="section-name">
+					<h2>Iris</h2>
+					<p>Mobile Filter System</p>
+				</div>
+				<a href='/products/iris-mobile-filter-system'>
+					<img src="{{ 'IRIS_iPhoneX_Front.png' | asset_url }}" class='tiny'>
+					<span>Shop Now</span>
+					<div class='name'></div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<!-- bf 2nd banner -->
+<!-- <div class="polarpro-banner-container-bf">
+	<div>
+		<div class="grid-uniform">
+			<div class="grid__item large--one-half medium--one-whole small--one-whole quartzline-bundle">
+				<div class="banner-content">
+					<h3>QuartzLine<span>Filters</span></h3>
+					<p>Premium camera filter options for<br/> photographers and videographers alike</p>
+					<a href="/collections/camera/products/quartzline-filters" class='banner-btn'>Shop Now</a>
+				</div>
+			</div>
+			<div class="grid__item large--one-half medium--one-whole small--one-whole gift-card flight-deck">
+				<div class="banner-content">
+					<h3>Flight<span class='pre'>Deck</span><span class='sub'>Monitor Mount</span></h3>
+					<p>Utilize any display with<br/> your Mavic remote</p>
+					<a href="/collections/mavic-2-filters-accessories/products/flightdeck-monitor-mount-mavic-remotes" class='banner-btn'>Shop Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<div class="shop-by-aircraft wrapper">
+	<h2>Shop By Device</h2>
+  	<div class="grid-uniform">
+    	{% for link in linklists.shop-by-device-4-0-homepage.links %}
+      	<div class="grid__item large--one-quarter">
+    		<a class='{{ link.title | handleize }}' href="{{ link.url }}">{{ link.title }}</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="product-range wrapper">
+	<h2>Product Range</h2>
+		<div class="grid-uniform">
+			<div class="grid__item large--one-third quartzline">
+				<div class="name">
+					<p>QuartzLine <span>Filters</span></p>
+				</div>
+			</div>
+			<div class="grid__item large--one-third">
+				<div class="name">
+					<p>Aerial <span>Filters</span></p>
+				</div>
+			</div>
+			<div class="grid__item large--one-third">
+				<div class="name">
+					<p>GoPro<span>Filters</span></p>
+				</div>
+			</div>
+			<div class="grid__item large--one-third">
+				<div class="name">
+					<p>Camera<span>Gear</span></p>
+				</div>
+			</div>
+			<div class="grid__item large--one-third">
+				<div class="name">
+					<p>Mounting<span>Solutions</span></p>
+				</div>
+			</div>
+			<div class="grid__item large--one-third">
+				<div class="name">
+					<p>Travel<span>Cases</span></p>
+				</div>
+			</div>
+		</div>
+</div>
+
+<!-- <div class="shop-bby-device wrapper">
+	<h2>Shop By Device</h2>
+	<div id="sbd-home" class="accordion">
+		<h3>Drone <i class="fa fa-chevron-circle-down"></i></h3>
+		<div class="accordion-inner">
+			<ul class="accordion-list">
+				{% for link in linklists.drone.links %}
+				<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<h3>GoPro <i class="fa fa-chevron-circle-down"></i></h3>
+		<div>
+          <div class="accordion-inner">
+			<ul class="accordion-list">
+				{% for link in linklists.gopro.links %}
+				<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% endfor %}
+			</ul>
+		  </div>
+      	</div>
+		<h3>Mobile <i class="fa fa-chevron-circle-down"></i></h3>
+		<div>
+      		<ul class="accordion-list">
+				{% for link in linklists.mobile.links %}
+				<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+				{% endfor %}
+			</ul>
+      	</div>
+	</div>
+</div> -->
+
+
+<!-- <div id="tout1_hm_4Tell" ></div> -->
+
+<div class="polar-pro-home-top">
+	<div class="hpb-container">
+		<!-- <a href="https://player.vimeo.com/video/243168082?transparent=0" class='we-are-polarpro fancybox.iframe'><img src="{{ 'We_Are_PolarPro_Banner.jpg' | asset_url }}"></a> -->
+		<div id='we-are-polar-pro-banner'>
+			<h2>Designed By Adventure, For Adventure</h2>
+            <a href="https://www.youtube.com/embed/4ChvSCsedpQ?rel=0&amp;showinfo=0" class='we-are-polarpro fancybox.iframe'><i class="fa fa-play-circle" aria-hidden="true"></i></a>
+			<p>We are a group of adventure seeking videographers and photographers, <br />ever searching for creative solutions to help capture perfection.</p>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+{% if settings.home_section_1 != blank %}
+  {% include settings.home_section_1 %}
+{% endif %}
+
+{% if settings.home_section_2 != blank and settings.home_section_2 != settings.home_section_1 %}
+  {% include settings.home_section_2 %}
+{% endif %}
+
+{% if settings.home_section_3 != blank and settings.home_section_3 != settings.home_section_2 and settings.home_section_3 != settings.home_section_1 %}
+  {% include settings.home_section_3 %}
+{% endif %}
+
+{% if settings.home_section_4 != blank and settings.home_section_4 != settings.home_section_3 and settings.home_section_4 != settings.home_section_2 and settings.home_section_4 != settings.home_section_1 %}
+  {% include settings.home_section_4 %}
+{% endif %}
+
+{% if settings.home_section_5 != blank and settings.home_section_5 != settings.home_section_4 and settings.home_section_5 != settings.home_section_3 and settings.home_section_5 != settings.home_section_2 and settings.home_section_5 != settings.home_section_1 %}
+  {% include settings.home_section_5 %}
+{% endif %}
+
+
+<div class='polar-pro-three-banners-bot'>
+	<div class='grid-uniform'>
+		<div class="grid__item large--one-half venture-banner banner-item">
+			<div class="overlay">
+				<a href="https://www.polarprofilters.com/blogs/polarpro/venture-14-dave-katz-in-bolivia" class="name_wrapper"><span class="overlay-cta">Read More</span></a>
+			</div>
+		</div>
+		<div class="grid__item large--one-half collection-banner banner-item">
+			<div class="overlay">
+				<a href="https://www.polarprofilters.com/collections/mavic-2-filters-accessories" class="name_wrapper"><span class="overlay-cta">Shop Now</span></a>
+			</div>
+		</div>
+		<div class="grid__item medium--one-whole large--one-whole product-banner banner-item">
+			<div class="overlay">
+				<a href="http://www.polarprofilters.com/collections/elektra-cinematic-color-presets" class="name_wrapper"><span class="overlay-cta">Shop Now</span></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+function gotosite() {
+	window.location = document.getElementById("shop-by-select").value; // JQuery:  $("#menu").val();
+}
+
+</script>
+
+<!-- this is index javascript -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	//polarpro slider
+	var owl = $('#polarpro-slider');
+
+	owl.owlCarousel({
+		 items: 1,
+		 loop: false,
+		 nav: false,
+		 dots: false,
+         autoplay: false,
+         autoplayTimeout: 8500
+	});
+
+	$('#polar-slider-next').click(function() {
+		owl.trigger('next.owl.carousel');
+		return false;
+	});
+
+	$('#polar-slider-prev').click(function() {
+		owl.trigger('prev.owl.carousel');
+		return false;
+	});
+
+  $( ".accordion" ).accordion({
+  heightStyle: "content",
+    collapsible: true,
+    active: false
+	});
+
+	$( ".accordion>h3" ).click(function(){
+		$( ".accordion>h3 i" ).removeClass('fa-chevron-circle-up').addClass('fa-chevron-circle-down');
+		if($(this).hasClass('ui-state-active')){
+			$(this).find('i').removeClass('fa-chevron-circle-down').addClass('fa-chevron-circle-up');
+		}
+	});
+
+	//we are polar pro video pop up
+	/* Apply fancybox to multiple items */
+	// $(".we-are-polarpro").fancybox({
+		// padding: 0,
+    // 	type: 'iframe',
+    // 	scrolling: 'no',
+		// width: 1400,
+		// autoHeight: true,
+		// autoWidth: true,
+		// autoSize : true
+	// });
+
+	$('.we-are-polarpro').fancybox({
+	  afterLoad : function( instance, current ) {
+
+	     // Remove scrollbars and change background
+	    current.$content.css({
+				overflow   : 'visible',
+	      background : '#000'
+			});
+
+	  },
+	  onUpdate : function( instance, current ) {
+	    var width,
+	        height,
+	        ratio = 21 / 9,
+	        video = current.$content;
+
+	    if ( video ) {
+	      video.hide();
+
+	      width  = current.$slide.width() - 100;
+	      height = current.$slide.height();
+
+	      if ( height * ratio > width ) {
+	        height = width / ratio;
+	      } else {
+	        width = height * ratio;
+	      }
+
+	      video.css({
+	        width  : width,
+	        height : height
+	      }).show();
+	    }
+	  }
+	})
+
+});
+</script>

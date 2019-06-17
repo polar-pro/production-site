@@ -1,0 +1,33 @@
+{% layout none %}
+{% paginate collection.products by 50 %}
+{
+  [{% for product in collection.products %}
+	{
+  	"available": {{ product.available }},
+  	"title": "{{ product.title }}",
+  	"vendor": "{{ product.vendor }}"
+	}{% unless forloop.last %},{% endunless %}{% endfor %}
+  ]
+}
+{% endpaginate %}
+
+
+<script type="text/javascript">
+
+function loadJSONcollection() {
+	console.log("triggered");
+	$.ajax({
+		url:	"/collections/MyCollection?view=json",
+		type:	'GET'
+	})
+	.done(function(data) {
+		var product = $.parseJSON(data);
+		$(product).each(function(index){
+			console.log(this.title);
+		});
+	})
+	.fail(function(data) {})
+	.always(function(data) {});
+}
+
+</script>

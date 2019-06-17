@@ -1,0 +1,6 @@
+{% capture before_img %}{% include 'shortcode-render' render:'before_img' default:'' %}{% endcapture %}
+{% capture after_img %}{% include 'shortcode-render' render:'after_img' default:'' %}{% endcapture %}
+{% capture image_visible %}{% include 'shortcode-render' render:'image_visible' default:'0.5' %}{% endcapture %}
+{% capture orientation %}{% include 'shortcode-render' render:'orientation' default:'horizontal' %}{% endcapture %}
+{% capture unique_id %}{% include 'shortcode-render' render:'unique_id' default:'' %}{% endcapture %}
+{% include 'imagecomparison' %}

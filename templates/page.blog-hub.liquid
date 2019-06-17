@@ -1,0 +1,27 @@
+<!-- /templates/page.liquid -->
+
+<div class="wrapper page-margin blog-hub">
+  <div class="grid">
+    <div class="grid__item large--one-third medium--one-whole small--one-whole">
+      <a href="/blogs/polarpro/tagged/venture" id='blog-venture' class='blog-item'><span class='text'>Venture</span></a>
+    </div>
+    <div class="grid__item large--one-third medium--one-whole small--one-whole">
+      <a href="/blogs/polarpro/tagged/tutorial-how-to" id='blog-tutorial-how-to' class='blog-item'><span class='text'>How - To</span></a>
+    </div>
+    <div class="grid__item large--one-third medium--one-whole small--one-whole">
+      <a href="/blogs/polarpro/tagged/press-release" id='blog-press-release' class='blog-item'><span class='text'>Press</span></a>
+    </div>
+
+
+    <div class="grid__item">
+      {% comment %}<h2 class="title text-center">{{ page.title }}</h2>{% endcomment %}
+      {% comment %}
+        Regular page content goes here.
+      {% endcomment %}
+
+      <div class="rte">
+        {{ page.content }}
+      </div>
+    </div>
+  </div>
+</div>

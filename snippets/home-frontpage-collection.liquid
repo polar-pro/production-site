@@ -1,0 +1,66 @@
+<h3 class='featured-product-header'>Featured Products</h3>
+
+{% if settings.home_collection != blank %}
+  {% assign collection = collections[settings.home_collection] %}
+  {% assign collection_size = collections[settings.home_collection].products_count %}
+  {% if collection_size == 0 %}
+    {{ 'theme-onboarding.css' | asset_url | stylesheet_tag }}
+    <div class="homepage-collection">
+      <div class="wrapper">
+        <div class="grid-uniform">
+          {% include 'onboarding-featured-products' %}
+        </div>
+      </div>
+    </div>
+  {% elsif collection_size == 1 %}
+    {% assign product = collection.products.first %}
+    {% if product.template_suffix == "charge-rabbit" %}
+      {% assign form_action = product.metafields.charge_rabbit.subscribe_path %}
+      {% assign form_method = 'get'%}
+      {% assign form_class = "charge-rabbit-product" %}
+      {% assign show_quantity = false %}
+      {% assign include_customer_id = true %}
+
+      {% include 'membership-product-callbacks' %}
+    {% else %}
+      {% assign form_action = '/cart/add'%}
+      {% assign form_method = 'post'%}
+      {% assign form_id = "AddToCartForm" %}
+      {% assign show_quantity = settings.product_quantity %}
+      {% include 'product-callbacks' %}
+    {% endif %}
+
+    <div class="homepage-product">
+      {% include "product" %}
+    </div>
+
+  {% elsif collection_size >= 2 %}
+    {% if collection_size == 2 %} 
+      {% assign grid_item_width = 'medium--one-half large--one-half' %}
+
+    {% elsif collection_size == 3 %}
+      {% assign grid_item_width = 'medium--one-third large--one-third' %}
+
+    {% else %}
+      {% assign grid_item_width = 'medium--one-half large--one-quarter' %}
+    {% endif %}
+    <div class="homepage-collection desktop-collection">
+      <div class="wrapper">
+        <div class="grid-uniform">
+          {% for product in collection.products limit:12 %}
+            {% include 'product-grid-item' %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+	<div class="homepage-collection mobile-collection">
+      <div class="wrapper">
+        <div class="grid-uniform">
+          {% for product in collection.products limit:4 %}
+            {% include 'product-grid-item' %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endif %}

@@ -1,0 +1,1602 @@
+<div class="find-my-defender find-gear">
+  <h5>Find My Size</h5>
+  <select name="make" id="make">
+    <option value="0">Select Make:</option>
+    <option value="1">Pentax (645Z-Mount)</option>
+    <option value="2">Pentax (K-Mount)</option>
+    <option value="3">Fuji X-Series</option>
+    <option value="4">Fuji G-Mount</option>
+    <option value="5">Tamron</option>
+    <option value="6">Rokinon Xeen</option>
+    <option value="7">Rokinon Cine</option>
+    <option value="8">Rokinon</option>
+    <option value="9">Sigma Cine</option>
+    <option value="10">Sigma</option>
+    <option value="11">Zeiss Cinema Lenses</option>
+    <option value="12">Canon Cinema Lenses</option>
+    <option value="13">Canon (RF-Mount)</option>
+    <option value="14">Canon (EF-S-Mount)</option>
+    <option value="15">Canon (EF-M-Mount)</option>
+    <option value="16">Canon (EF-Mount)</option>
+    <option value="17">Sony (A-Mount)</option>
+    <option value="18">Sony (E-Mount)</option>
+    <option value="19">Nikon (F-Mount)</option>
+    <option value="20">Nikon (Z-Mount)</option>
+    <option value="21">Nikon (F-Mount)</option>
+  </select>
+  <select name="model" id="model">
+      <option value="model">Select Model</option>
+  </select>
+  <label for="Size">Your Defender size:</label>
+  <div type="text" name="size" id="size"> - </div>
+
+
+  <!-- find my defender script -->
+  <script type="text/javascript">
+  var a = {
+      Cars:
+      [
+      {
+        "make": "Pentax (645Z-Mount)",
+        "model": "smc PENTAX-FA645 400mm F5.6 ED [IF]",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (645Z-Mount)",
+        "model": "smc PENTAX-FA645 80-160mm F4.5",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (645Z-Mount)",
+        "model": "smc PENTAX D-FA 645 55mm F2.8 AL (IF) SDM AW",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (645Z-Mount)",
+        "model": "smc PENTAX-FA645 55-110mm F5.6",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (645Z-Mount)",
+        "model": "smc PENTAX-FA645 45-85mm F4.5",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (645Z-Mount)",
+        "model": "smc PENTAX-FA645 150mm F2.8 [IF]",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Pentax (645Z-Mount)",
+        "model": "smc PENTAX-DA 50-135mm F2.8 ED [IF] SDM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Pentax (645Z-Mount)",
+        "model": "smc PENTAX-FA645 75mm F2.8",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "HD PENTAX-D FA 150-450mm F4.5-5.6ED DC AW",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX-FA*645 300mm F4 ED [IF]",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX-DA 300mm F4 ED[IF] SDMfr",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX-DA 200mm F2.8 ED[IF] SDM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX-DA 60-250mm F4 ED[IF] SDM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "HD PENTAX-DA 55-300mm F4.5-6.3ED PLM WR RE",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "HD PENTAX-D FA 24-70mm F2.8 ED SDM WR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX-DA 16-50mm F2.8 ED AL[IF] SDM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX DA 55mm F1.4 SDM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX DA 50-200 mm F4-5.6 ED WR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "HD PENTAX DA 55-300mm F4 5.8 ED WR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "HD PENTAX-D FA 28-105mm F3.5-5.6 ED DC WR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "HD PENTAX DA 20-40mm F2.8-4 ED Limited DC WR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX-DA 18-135mm F3.5-5.6 ED AL[IF] DC WR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX-FA 77mm f/1.8 Limited",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX-DA 50mm F1.8",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX-FA 43mm f/1.9 Limited",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Pentax (K-Mount)",
+        "model": "smc PENTAX-DA 35mm F2.4 AL",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF100-400mmF4.5-5.6 R LM OIS WR",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "FUJINON LENS XF200mmF2 R LM OIS",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "MKX50-135mmT2.9",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "MKX18-55mmT2.9",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF50-140mmF2.8 R LM OIS WR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF16-55mmF2.8 R LM WR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XC50-230mmF4.5-6.7 OIS II",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF55-200mmF3.5-4.8 R LM OIS",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF18-135mmF3.5-5.6 R LM OIS WR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF90mmF2 R LM WR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF56mmF1.2 R",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF23mmF1.4 R",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF16mmF1.4 R WR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XC16-50mmF3.5-5.6 OIS II",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XC15-45mmF3.5-5.6 OIS PZ",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF18-55mmF2.8-4 R LM OIS",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF60mmF2.4 R Macro",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF50mmF2 R WR",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF35mmF2 R WR",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF35mmF1.4 R",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF23mmF2 R WR",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF18mmF2 R",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji X-Series",
+        "model": "XF14mmF2.8 R",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Fuji G-Mount",
+        "model": "GF110mmF2 R LM WR",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Fuji G-Mount",
+        "model": "GF100-200mmF5.6 R LM OIS WR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Fuji G-Mount",
+        "model": "GF32-64mmF4 R LM WR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Fuji G-Mount",
+        "model": "GF120mmF4 R LM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Fuji G-Mount",
+        "model": "GF63mmF2.8 R WR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Fuji G-Mount",
+        "model": "GF45mmF2.8 R WR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Fuji G-Mount",
+        "model": "GF23mmF4 R LM WR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "10-24mm F/3.5-4.5 Di II VC HLD",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "17-35mm F/2.8-4 Di OSD",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "100-400mm F/4.5-6.3 Di VC USD",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "SP 70-300mm F/4-5.6 Di VC USD",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "SP 85mm F/1.8 Di VC USD",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "SP 45mm F/1.8 Di VC USD",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "SP 35mm F/1.8 Di VC USD",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "SP AF70-200mm F/2.8 Di LD [IF] MACRO",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "SP 70-200mm F/2.8 Di VC USD G2",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "SP 24-70mm F/2.8 Di VC USD G2",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Tamron",
+        "model": "28-75mm F/2.8 Di III RXD",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "18-200mm F/3.5-6.3 Di III VC",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "SP AF60mm F/2 Di II LD [IF] MACRO 1:1",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "18-270mm F/3.5-6.3 Di II VC PZD",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "16-300mm F/3.5-6.3 Di II VC PZD MACRO",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "18-200mm F/3.5-6.3 Di II VC",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "70-300mm F/4-5.6 Di LD Macro",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "70-210mm /F4 Di VC USD",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "SP 28-75mm F/2.8 XR Di LD",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "SP 17-50mm F/2.8 Di II LD",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "28-300mm F/3.5-6.3 Di",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Tamron",
+        "model": "14-150mm F/3.5-5.8 Di III",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Rokinon Xeen",
+        "model": "135MM T2.2",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Rokinon Xeen",
+        "model": "85MM T1.5",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Rokinon Xeen",
+        "model": "50MM T1.5",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Rokinon Xeen",
+        "model": "35MM T1.5",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Rokinon Xeen",
+        "model": "24MM T1.5",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Rokinon Xeen",
+        "model": "20MM T1.9",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Rokinon Xeen",
+        "model": "16MM T2.6",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Rokinon Xeen",
+        "model": "14MM T3.1",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "35mm T1.5",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "24mm T1.5",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "16mm T2.2",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "135mm T2.2",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "35mm T1.5",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "16mm T2.2",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "100mm T3.1",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "24mm T1.5",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "20mm T1.9",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "50mm T1.5",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "35mm T1.3",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "50mm T1.3",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Rokinon Cine",
+        "model": "21mm T1.5",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Rokinon",
+        "model": "85mm F1.4 AF Canon",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon",
+        "model": "14mm F2.8 AF Canon",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon",
+        "model": "135mm F2.0",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon",
+        "model": "24mm F1.4",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon",
+        "model": "35mm F1.4",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon",
+        "model": "20mm F1.8",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon",
+        "model": "50mm F1.4",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon",
+        "model": "16mm F2.0",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Rokinon",
+        "model": "50mm F1.4 AF Sony E",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Rokinon",
+        "model": "35mm F1.4 AF Sony E",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Rokinon",
+        "model": "50mm F1.2",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Rokinon",
+        "model": "100mm F2.8",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Rokinon",
+        "model": "35mm F1.2",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Rokinon",
+        "model": "35mm F2.8 AF Sony E",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Rokinon",
+        "model": "AF 24mm F2.8 Sony E",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Rokinon",
+        "model": "21mm F1.4",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Rokinon",
+        "model": "300mm F6.3 for Mirrorless",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Rokinon",
+        "model": "300mm F6.3 for DSLR's",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "24-35mm T2.2",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "18-35mm T2",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "135mm T2",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "105mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "85mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "50mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "40mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "28mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "24mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "20mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma Cine",
+        "model": "14mm T2",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma",
+        "model": "60-600mm F4.5-6.3 DG OS HSM I S",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Sigma",
+        "model": "14mm F1.8 DG HSM | A",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sigma",
+        "model": "24-35mm F2 DG HSM | A",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sigma",
+        "model": "10-20mm F4-5.6 EX DC (HSM)*",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sigma",
+        "model": "40mm F1.4 DG HSM I Art",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sigma",
+        "model": "28mm F1.4 DG HSM I Art",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sigma",
+        "model": "24mm F1.4 DG HSM | A",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sigma",
+        "model": "18-250mm F3.5-6.3 DC (OS)* MACRO HSM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sigma",
+        "model": "18-200mm F3.5-6.3 DC Macro OS HSM | C",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sigma",
+        "model": "8-16mm F4.5-5.6 DC HSM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sigma",
+        "model": "16mm F1.4 DC DN | C",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "ZEISS Lightweight Zoom LWZ.3 21-100mm/T2.9-3.9 T*",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "CP.2 85 mm/T1.5 Super Speed",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "CP.2 50 mm/T1.5 Super Speed",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "CP.2 35 mm/T1.5 Super Speed",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 200 mm T2.1",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 150 mm T1.8",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 135 mm T1.5",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 18 mm T1.5",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 15 mm T1.8",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 100 mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 85 mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 65 mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 50 mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 35 mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 29 mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 25 mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Zeiss Cinema Lenses",
+        "model": "Supreme Prime 21 mm T1.5",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Canon Cinema Lenses",
+        "model": "CN-E135mm T2.2 L F",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Canon Cinema Lenses",
+        "model": "CN-E50mm T1.3 L F",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Canon Cinema Lenses",
+        "model": "CN-E35mm T1.5 L F",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Canon Cinema Lenses",
+        "model": "CN-E24mm T1.5 L F",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Canon Cinema Lenses",
+        "model": "CN-E20mm T1.5 L F",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Canon Cinema Lenses",
+        "model": "CN-E14mmT3.1 L F",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Canon Cinema Lenses",
+        "model": "CN-E30-105mm T2.8 L S",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Canon Cinema Lenses",
+        "model": "CN-E30-105mm T2.8 L SP",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Canon Cinema Lenses",
+        "model": "CN-E15.5-47mm T2.8 L S",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Canon Cinema Lenses",
+        "model": "CN-E15.5-47mm T2.8 L SP",
+        "size": "DFNDR 114"
+      },
+      {
+        "make": "Canon (RF-Mount)",
+        "model": "RF 50mm F1.2 L USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (RF-Mount)",
+        "model": "RF 24_105mm F4 L IS USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (RF-Mount)",
+        "model": "RF 35mm F1.8 Macro IS STM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 17-55mm f/2.8 IS USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 15-85mm f/3.5-5.6 IS USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 10-22mm f/3.5-4.5 USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 35mm f/2.8 Macro IS STM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 60mm f/2.8 Macro USM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 55-250mm f/4-5.6 IS II",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 55-250mm f/4-5.6 IS STM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 18-135mm f/3.5-5.6 IS",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 18-135mm f/3.5-5.6 IS STM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 18-55mm f/3.5-5.6 IS STM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-S-Mount)",
+        "model": "EF-S 18-55mm f/3.5-5.6 IS",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-M-Mount)",
+        "model": "EF-M 55_200mm f/4.5_6.3 IS STM",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Canon (EF-M-Mount)",
+        "model": "EF-M 18-150mm f/3.5-6.3 IS STM Lens Graphite",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Canon (EF-M-Mount)",
+        "model": "EF-M 18-55mm f/3.5-5.6 IS STM",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 100-400mm F4.5-5.6L IS II USM",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 24-70mm f/2.8L II USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 200mm f/2.8L II USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 180mm f/3.5L Macro USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 135mm f/2L USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 16-35mm f/4L IS USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 70-300mm f/4-5.6L IS USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 70-300mm f/4.5-5.6 DO IS USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 70-200mm f/2.8L USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 70-200mm f/2.8L IS II USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 50mm f/1.2L USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 24_105mm f/3.5_5.6 IS STM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 24-105mm f/4L IS USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 24-70mm f/4L IS USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 24mm f/1.4L II USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 24_105mm f/4L IS II USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 17-40mm f/4L USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 16-35mm f/2.8 III USM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 100mm f/2 USM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 75-300mm f/4-5.6 III",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 70-300mm f/4-5.6 IS USM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 50mm f/1.8 STM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 70-200mm f/4L USM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 70-200mm f/4L IS USM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 50mm f/1.8 II",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 28mm f/1.8 USM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 28mm f/2.8 IS USM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Canon (EF-Mount)",
+        "model": "EF 50mm f/1.4 USM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "70-400 mm F4-5.6 G SSM II",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "70_300 mm F4.5_5.6 G SSM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "Vario-Sonnar",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "Vario-Sonnar",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "70_200 mm F2.8 G SSM II",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "Sonnar",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "Planar T* 50 mm F1.4 ZA SSM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "Vario-Sonnar",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "Vario-Sonnar",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "DT 16_50 mm F2.8 SSM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "DT 11_18 mm F4.5_5.6",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "100 mm F2.8 Macro",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "85 mm F2.8 SAM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "DT 55_200 mm F4_5.6 SAM II",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "50 mm F2.8 Macro",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "DT 50 mm F1.8 SAM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "DT 35 mm F1.8 SAM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "35 mm F1.4 G",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "DT 30 mm F2.8 Macro SAM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "DT 18-250 mm F3.5_6.3",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "DT 18_135 mm F3.5_5.6 SAM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "DT 18_55 mm F3.5_5.6 SAM II",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "Vario-Sonnar",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (A-Mount)",
+        "model": "DT 16_105 mm F3.5_5.6",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "G Master FE 100-400mm super-telephoto zoom lens",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 85 mm F1.4 GM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 70-300mm F4.5-5.6 G OSS",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 70-200 mm F2.8 GM OSS",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "Planar T* FE 50mm F1.4 ZA",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 24-70 mm F2.8 GM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 24-240mm F3.5-6.3 OSS",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 100mm F2.8 STF GM OSS",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 12-24mm F4 G",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 16-35mm F2.8 GM",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 24_105 mm F4 G OSS Lens",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 50 mm F2.8 Macro",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 50mm F1.8",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "Distagon T* FE 35 mm F1.4 ZA",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 28-70 mm F3.5-5.6 OSS",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "Vario-Tessar T* FE 24-70 mm F4 ZA OSS",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "E 18_200 mm F3.5_6.3 OSS LE",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "E 18_200 mm F3.5-6.3 OSS",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "E 10_18 mm F4 OSS",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 24mm F1.4 GM",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "E PZ 16_50 mm F3.5_5.6 OSS",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "Sonnar",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "E 55_210 mm F4.5-6.3 OSS",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "Sonnar T* FE 35 mm F2.8 ZA",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "E 35 mm F1.8 OSS",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "E 30 mm F3.5 Macro",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "FE 28 mm F2",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "Sonnar",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "E 18_55 mm F3.5_5.6 OSS",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Sony (E-Mount)",
+        "model": "E 50 mm F1.8 OSS",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 105mm f/1.4E ED",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 80-400mm f/4.5-5.6 G ED VR",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 105mm f/1.4E ED",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 80-400mm f/4.5-5.6 GEDVR",
+        "size": "DFNDR 95"
+      },
+      {
+        "make": "Nikon (Z-Mount)",
+        "model": "NIKKOR Z 14-30mm f/4 S",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (Z-Mount)",
+        "model": "NIKKOR Z 58mm f/0.95 S Noct",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 300mm f/4E PF ED VR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 300mm f/4E PF ED VR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 85mm f/1.4G",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 70-200mm f/2.8E FL ED VR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 70-200mm f/2.8G ED VR II",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-P NIKKOR 70-300mm f/4.5-5.6E ED VR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 58mm f/1.4G",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 28-300mm f/3.5-5.6G ED VR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 28mm f/1.4E ED",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 24mm f/1.4G ED",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 24-70mm F2.8G ED",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 24-120mm f/4G ED VR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 20mm f/1.8G ED",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S DX NIKKOR 18-300mm f/3.5-5.6G ED VR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 18-35mm f/3.5-4.5G ED",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 16-35mm f/4G ED VR",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S DX NIKKOR 10-24mm F3.5-4.5G E",
+        "size": "DFNDR 77 | 82"
+      },
+      {
+        "make": "Nikon (Z-Mount)",
+        "model": "NIKKOR Z 50mm f/1.8 S",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (Z-Mount)",
+        "model": "NIKKOR Z 35mm f/1.8 S",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (Z-Mount)",
+        "model": "NIKKOR Z 24-70mm f/4 S",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S DX Micro NIKKOR 85mm F3.5G ED VR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-P DX NIKKOR 70-300mm f/4.5-6.3G ED",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-P DX NIKKOR 70-300mm f/4.5-6.3G ED VR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S DX NIKKOR 55-200mm f/4-5.6G ED VR II",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S DX VR Zoom-Nikkor ED 55-200mm F4-5.6G",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 50mm F1.4G",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 50mm f/1.8G",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 50mm f/1.8G Special Edition",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S DX Micro NIKKOR 40mm f/2.8G",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S DX NIKKOR 35mm f/1.8G",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S NIKKOR 28mm f/1.8G",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S DX NIKKOR 16-85mm F3.5-5.6G ED VR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S DX NIKKOR 18-105mm F3.5-5.6G ED VR",
+        "size": "DFNDR 67 | 72"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-S DX NIKKOR 18-55mm f/3.5-5.6G VR II",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-P DX NIKKOR 18-55mm f/3.5-5.6G VR",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF-P DX NIKKOR 18-55mm f/3.5-5.6G",
+        "size": "DFNDR 55 | 62"
+      },
+      {
+        "make": "Nikon (F-Mount)",
+        "model": "AF Nikkor 50mm f/1.8D",
+        "size": "DFNDR 55 | 62"
+      }
+    ]
+  };
+  $("#make").change(function () {
+      $('#model').empty().append($('<option></option>').val('Select Model').html('Select Model'));
+      var matchVal = $("#make option:selected").text();
+      a.Cars.filter(function (car) {
+          if (car.make == matchVal) {
+              $("#model").append($('<option></option>').val(car.size).html(car.model));
+          }
+      });
+  });
+
+  $('#model').change(function () {
+      //alert($(this).val());
+      //var getModelval = $('#model').val();
+      $('#size').html($(this).val());
+      //$('#size').val(.val(id));
+
+
+  });
+  </script>
+
+
+</div>

@@ -1,0 +1,26 @@
+<div class="header-menu nav-wrapper">
+  {% comment %}
+    List out your main-menu linklist (default)
+
+    More info on linklists:
+      - http://docs.shopify.com/themes/liquid-variables/linklists
+  {% endcomment %}
+  <ul class="main-menu accessibleNav">
+    {% if settings.main_menu_linklist %}
+      {% assign main_menu_linklist = settings.main_menu_linklist %}
+    {% else %}
+      {% assign main_menu_linklist = 'top-menu-3-0' %}
+    {% endif %}
+    {% for link in linklists[main_menu_linklist].links %}
+      {% include 'nav-item' %}
+    {% endfor %}
+    {% comment %}
+    <li class="cart-text-link">
+      <a href="/cart" class="CartToggle">
+        {{ 'layout.cart.title' | t }}
+        <span class="cartCost {% if cart.item_count < 1 %} hidden-count {% endif %}">(<span class="money">{{ cart.total_price | money }}</span>)</span>
+      </a>
+    </li>
+    {% endcomment %}
+  </ul>
+</div>
