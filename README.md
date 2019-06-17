@@ -22,10 +22,10 @@ Please note your theme id should be unique and only be used by you as your own p
 
 4. After making changes on your branch, create a pull request to merge to master branch before deployment.
 
-5. After your branch successfully merges, deploy the github source code to Shopify's site through Deploy Bot
+5. Become a user in Deploy Bot (email)
 
-(You need an email to be added as an user to Deploy Bot)
+6. After your branch successfully merges, deploy the github source code to Shopify's site through Deploy Bot
 
 polar-pro.deploybot.com
 
-6. Deploy commit -> pushes changes to live production site.
+7. Deploy commit -> pushes changes to live production site.
