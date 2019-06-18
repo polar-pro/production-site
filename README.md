@@ -29,3 +29,10 @@ Please note your theme id should be unique and only be used by you as your own p
 polar-pro.deploybot.com
 
 7. Deploy commit -> pushes changes to live production site.
+
+8. Integrate Project into your slack. First install Github app into your slack account (the account that is a member of the polar-pro github orgaization)
+
+Enter this command into the Slack Github channel to integrate notifications from the remote repository into your slack channel.
+```
+/github subscribe polar-pro/production-site
+```
